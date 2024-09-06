@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+/* Variáveis de Cores */
+:root {
+    --cor1: #9B30FF; /* Roxo Escuro */
+    --cor2: #4C1F8C; /* Roxo Médio */
+    --cor3: #754227; /* Marrom */
+    --cor4: #0D0D0D; /* Preto */
+    --cor5: #ead7ff; /* Cinza Azulado */
+    --cor6: #FFFFFF; /* Branco (como cor adicional para contrastar) */
+    text-align: center;
+}
+
+#texto-inicial{
+    padding: 0px 20px;
+    line-height: 1.5;
+}
+
+#sobre-mim{
+    padding: 0px 20px;
+    line-height: 1.5;
+}
+
+#descricao-servicos{
+    padding: 0px 20px;
+    line-height: 1.5;
+}
+
+/* Estilos Gerais */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor4);
+    color: var(--cor5);
+    display: flex;
+    flex-direction: column;
+}
+
+header {    
+    background-image: url('https://capsule-render.vercel.app/api?type=waving&color=9B30FF&height=120&section=header');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o elemento */
+    background-position: center; /* Centraliza a imagem no elemento */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: 80px; /* Define a altura do nav conforme a imagem */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--cor2);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: var(--cor1);
+}
+
+/* Estilos para a Seção de Contato */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cor5);
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: var(--cor1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--cor3);
+}
+
+/* Estilos para a Seção de Serviços */
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services > div {
+    text-align: center;
+    max-width: 800px;
+}
+
+/* Estilos para a Seção de Portfólio */
+#portfolio {
+    padding: 20px;
+    background-color: var(--cor4);
+}
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-item .portfolio-text, 
+.portfolio-item .portfolio-image {
+    flex: 1;
+    padding: 10px;
+}
+
+.portfolio-item .portfolio-text {
+    text-align: left;
+}
+
+.portfolio-item .portfolio-image {
+    text-align: right;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.portfolio-item.reversed {
+    flex-direction: row-reverse;
+}
+
+.portfolio-item.reversed .portfolio-text {
+    text-align: right;
+}
+
+.portfolio-item.reversed .portfolio-image {
+    text-align: left;
+}
+
+/* Estilos Específicos para Dispositivos Retrato */
+@media (orientation: portrait) {
+    .portfolio-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portfolio-item .portfolio-text, 
+    .portfolio-item .portfolio-image {
+        padding: 10px 0;
+    }
+
+    .portfolio-item .portfolio-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    main {
+        flex: 1;
+        padding: 20px;
+        max-width: 720px;
+        margin: 60px auto 0; /* Adiciona margem superior para acomodar o cabeçalho fixo */
+    }
+    nav ul li {
+        margin: 0 15px;
+    }
+    /* Estilos para a Foto de Perfil */
+.profile-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 200px; /* Ajuste conforme necessário */
+}
+
+.profile-pic {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: 150px; /* Manter a altura igual à largura para manter a forma circular */
+    border-radius: 50%; /* Faz a imagem ser redonda */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    border: 3px solid var(--cor1); /* Opcional: Adiciona uma borda ao redor da imagem */
+}
+
+}
+
+/* Estilos Específicos para Dispositivos Paisagem */
+@media (orientation: landscape) {
+    .portfolio-item {
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite que itens se ajustem e usem mais espaço horizontal */
+        justify-content: space-between;
+    }
+
+    .portfolio-item .portfolio-text, 
+    .portfolio-item .portfolio-image {
+        padding: 20px;
+        flex: 1;
+        max-width: 45%; /* Permite que os itens ocupem mais espaço sem sobrepor */
+    }
+
+    .portfolio-item .portfolio-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    main {
+        flex: 1;
+        padding: 20px;
+        max-width: 1280px;
+        margin: 60px auto 0; /* Adiciona margem superior para acomodar o cabeçalho fixo */
+    }
+    nav ul li {
+        margin: 0 35px;
+    }
+    /* Estilos para a Foto de Perfil */
+.profile-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 300px; /* Ajuste conforme necessário */
+}
+
+.profile-pic {
+    width: 250px; /* Ajuste o tamanho conforme necessário */
+    height: 250px; /* Manter a altura igual à largura para manter a forma circular */
+    border-radius: 50%; /* Faz a imagem ser redonda */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    border: 3px solid var(--cor1); /* Opcional: Adiciona uma borda ao redor da imagem */
+}
+
+}
+
+footer {
+    background-image: url('https://capsule-render.vercel.app/api?type=waving&color=9B30FF&height=120&section=footer');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o elemento */
+    background-position: bottom; /* Centraliza horizontalmente e posiciona a imagem na parte inferior */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: 120px; /* Define a altura do footer conforme a imagem */
+    text-align: center; /* Centraliza o texto dentro do footer */
+    color: white; /* Cor do texto */
+    padding: 25px 0; /* Espaço interno no footer */
+    margin-top: 30px; /* Espaço acima do footer, se necessário */
+}
+

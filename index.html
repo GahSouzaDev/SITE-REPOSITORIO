@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- SEO do SITE -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descrição do seu site. Isso deve ser um resumo conciso e relevante do que seu site oferece.">
+    <meta name="keywords" content="palavra-chave1, palavra-chave2, palavra-chave3">
+    <meta name="author" content="Seu Nome">
+    <meta property="og:title" content="Título da Página">
+    <meta property="og:description" content="Descrição da Página para redes sociais.">
+    <meta property="og:image" content="URL da Imagem de Pré-visualização">
+    <meta property="og:url" content="URL da Página">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Título da Página">
+    <meta name="twitter:description" content="Descrição da Página para Twitter.">
+    <meta name="twitter:image" content="URL da Imagem de Pré-visualização no Twitter">
+    
+    <!-- Link para CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Título da Página -->
+    <title>Gah-Souza-Dev</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h1>Emerson Souza Desenvolvedor Full Stack</h1>
+            <p id="texto-inicial">Bem-vindo ao meu portfólio! Este site foi criado para apresentar meus projetos e habilidades, além de oferecer um meio de contato para oportunidades de trabalho. Explore meu trabalho e veja como posso ajudar a transformar suas ideias em realidade!</p>
+        </section>
+        
+        <section id="profile">
+            <div class="profile-container">
+                <img src="profile.png" alt="Sua Foto de Perfil" class="profile-pic">
+            </div>
+            <!-- Outros conteúdos -->
+        </section>
+
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <p id="sobre-mim">Sou estudante de Engenharia de Software e trabalho como Desenvolvedor Full Stack, o que significa que atuo tanto no desenvolvimento de front-end (a parte visual e interativa) quanto no back-end (a lógica e funcionalidade por trás dos sistemas). Minha paixão é criar soluções completas e funcionais, desde o design das interfaces até a estrutura dos dados. Estou sempre buscando novos desafios para crescer profissionalmente e contribuir com projetos inovadores.
+
+                Se você está buscando alguém para desenvolver seu próximo projeto, entre em contato!</p>
+        </section>
+        
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <div class="portfolio-item">
+                <div class="portfolio-text">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição do projeto 1.</p>
+                </div>
+                <div class="portfolio-image">
+                    <img src="nao-clique-aqui.jpg" alt="Projeto 1">
+                </div>
+            </div>
+            <div class="portfolio-item reversed">
+                <div class="portfolio-text">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição do projeto 2.</p>
+                </div>
+                <div class="portfolio-image">
+                    <img src="nao-clique-aqui.jpg" alt="Projeto 2">
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-text">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição do projeto 3.</p>
+                </div>
+                <div class="portfolio-image">
+                    <img src="nao-clique-aqui.jpg" alt="Projeto 3">
+                </div>
+            </div>
+            <div class="portfolio-item reversed">
+                <div class="portfolio-text">
+                    <h3>Projeto 4</h3>
+                    <p>Descrição do projeto 4.</p>
+                </div>
+                <div class="portfolio-image">
+                    <img src="nao-clique-aqui.jpg" alt="Projeto 4">
+                </div>
+            </div>
+        </section>
+        
+        <section id="services">
+            <h2>Serviços</h2> <p id="descricao-servicos">Ofereço desenvolvimento de sites personalizados e interfaces tanto para desktop quanto para mobile. Cada projeto é feito sob medida para atender suas necessidades específicas, com custos ajustados conforme a complexidade e a demanda. Vamos trabalhar juntos para criar soluções digitais eficientes e de qualidade para o seu negócio.</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Contato</h2>
+            <form action="envio.php" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Gah-Souza-Dev. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
