@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+#aprensetacao{
+    width: 100%;    
+}
+
 #titulo-pagina{
     font-size: 33px;
     padding: 0px 0px 20px 0px;
