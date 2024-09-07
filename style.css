@@ -3,11 +3,11 @@
 /* Variáveis de Cores */
 :root {
     --cor1: #9B30FF; /* Roxo Escuro */
-    --cor2: #4C1F8C; /* Roxo Médio */
+    --cor2: #1c0043; /* Roxo Médio */
     --cor3: #754227; /* Marrom */
     --cor4: #0D0D0D; /* Preto */
     --cor5: #ffffff; /* Cinza Azulado */
-    --cor6: #ffffff; /* Branco (como cor adicional para contrastar) */
+    --cor6: #bdbdbd; /* Branco (como cor adicional para contrastar) */
     text-align: center;
 }
 
@@ -211,6 +211,7 @@ form button:hover {
     }
     nav ul li {
         margin: 0 10px;
+        
     }
     /* Estilos para a Foto de Perfil */
 .profile-container {
