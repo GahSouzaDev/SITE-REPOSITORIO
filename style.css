@@ -295,4 +295,7 @@ footer {
     padding: 25px 0; /* Espaço interno no footer */
     margin-top: 30px; /* Espaço acima do footer, se necessário */
 }
+#copyright{
+    margin-bottom: 5px;
+}
 
