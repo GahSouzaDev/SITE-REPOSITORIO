@@ -252,6 +252,9 @@ form button:hover {
 .desktop-text{
     display: none;
 }
+.hover-message{
+    display: none;
+}
 }
 
 /* Estilos Específicos para Dispositivos Paisagem */
@@ -308,6 +311,32 @@ form button:hover {
 .mobile-text{
     display: none;
 }
+.image-container {
+    position: relative;
+}
+
+.hover-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    transition-delay: 0s; /* Remove o atraso quando o mouse não está sobre o elemento */
+    pointer-events: none;
+    text-align: center;
+}
+
+.image-container:hover .hover-message {
+    opacity: 1;
+    transition-delay: 0.5s; /* Adiciona um atraso de 0.3 segundos antes que a transição comece quando o mouse está sobre o elemento */
+}
+
+
 }
 
 footer {

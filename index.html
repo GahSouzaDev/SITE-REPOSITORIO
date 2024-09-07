@@ -67,8 +67,16 @@
                     <p>Projeto de Simulação de Smartphone com interface intuitiva e aplicativos básicos, desenvolvido em HTML, CSS e JavaScript. Experimente um smartphone completo diretamente no seu navegador, com funcionalidades como câmera, Calendaário, Previsão do tempo, Calendario, entre outros.</p>
                 </div>
                 <div class="portfolio-image">
-                    <a href="https://gahsouzadev.github.io/Simulador-SMARTPHONE/index.html" target="_blank"><img src="nao-clique-aqui.jpg" alt="Projeto 1" id="imagem-portifolio"></a>
+                    <a href="https://gahsouzadev.github.io/Simulador-SMARTPHONE/index.html" target="_blank">
+                        <div class="image-container">
+                            <img src="imagem1.jpg" alt="Simulador de SMARTPHONE" id="imagem-portifolio">
+                            <div class="hover-message">Clique para ver o simulador</div>
+                        </div>
+                    </a>
                 </div>
+                
+                
+                
             </div>
             <div class="portfolio-item reversed">
                 <div class="portfolio-text">
@@ -76,7 +84,7 @@
                     <p>Descrição do projeto 2.</p>
                 </div>
                 <div class="portfolio-image">
-                    <img src="nao-clique-aqui.jpg" alt="Projeto 2" id="imagem-portifolio">
+                    <img src="imagem1.jpg" alt="Projeto 2" id="imagem-portifolio">
                 </div>
             </div>
             <div class="portfolio-item">
@@ -85,7 +93,7 @@
                     <p>Descrição do projeto 3.</p>
                 </div>
                 <div class="portfolio-image">
-                    <img src="nao-clique-aqui.jpg" alt="Projeto 3" id="imagem-portifolio">
+                    <img src="imagem1.jpg" alt="Projeto 3" id="imagem-portifolio">
                 </div>
             </div>
             <div class="portfolio-item reversed">
@@ -94,7 +102,7 @@
                     <p>Descrição do projeto 4.</p>
                 </div>
                 <div class="portfolio-image">
-                    <img src="nao-clique-aqui.jpg" alt="Projeto 4" id="imagem-portifolio">
+                    <img src="imagem1.jpg" alt="Projeto 4" id="imagem-portifolio">
                 </div>
             </div>
         </section>
@@ -105,17 +113,17 @@
         
         <section id="contact">
             <h2>Contato</h2>
-            <form action="envio.php" method="post">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
+            <form id="form">
+                <label for="from_name">Nome:</label>
+                <input type="text" placeholder="Seu Nome" id="from_name" name="from_name" required>
                 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email_id">Email:</label>
+                <input type="email" id="email_id" placeholder="Seu Email" name="email_id" required>
                 
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
                 
-                <button type="submit">Enviar</button>
+                <button type="submit" id="button">Enviar</button>
             </form>
         </section>
     </main>
@@ -124,5 +132,11 @@
         <p id="copyright">&copy; 2024 Gah-Souza-Dev. Todos os direitos reservados.</p>
     </footer>
     <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      
+      <script type="text/javascript">
+        emailjs.init('NQZvwCNXkOscBas-G')
+      </script>
 </body>
 </html>
