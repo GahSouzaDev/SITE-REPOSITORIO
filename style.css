@@ -249,7 +249,9 @@ form button:hover {
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
     border: 3px solid var(--cor1); /* Opcional: Adiciona uma borda ao redor da imagem */
 }
-
+.desktop-text{
+    display: none;
+}
 }
 
 /* Estilos Específicos para Dispositivos Paisagem */
@@ -302,6 +304,9 @@ form button:hover {
 }
 #imagem-portifolio:hover{
     filter: grayscale(0%); /* Remove o efeito de preto e branco */
+}
+.mobile-text{
+    display: none;
 }
 }
 
