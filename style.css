@@ -201,7 +201,7 @@ form button:hover {
     }
 
     .portfolio-item .portfolio-image img {
-        max-width: 80%;
+        max-width: 100%;
         margin: 0 auto;
     }
     main {
@@ -253,6 +253,9 @@ form button:hover {
 html {
     scrollbar-color:  var(--cor1) var(--cor5); /* Cor da parte móvel e do fundo da barra de rolagem */
     scrollbar-width: thin; /* Define a largura da barra de rolagem */
+}
+.ajuste-mobile{
+    display: none;
 }
 }
 
@@ -352,6 +355,9 @@ html {
 html {
     scrollbar-color:  var(--cor5) var(--cor1); /* Cor da parte móvel e do fundo da barra de rolagem */
     scrollbar-width: thin; /* Define a largura da barra de rolagem */
+}
+.ajuste-desktop{
+    display: none;
 }
 }
 
