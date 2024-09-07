@@ -10,7 +10,7 @@
     --cor6: #6200ff; /* Branco (como cor adicional para contrastar) */
     --cor7: #cca8f5dd; /* Branco (como cor adicional para contrastar) */
     text-align: center;
-}
+    }
 
 #aprensetacao{
     width: 100%;    
@@ -201,7 +201,7 @@ form button:hover {
     }
 
     .portfolio-item .portfolio-image img {
-        max-width: 100%;
+        max-width: 90%;
         margin: 0 auto;
     }
     main {
@@ -255,7 +255,7 @@ html {
     scrollbar-width: thin; /* Define a largura da barra de rolagem */
 }
 .ajuste-mobile{
-    display: none;
+    display: none;    
 }
 }
 
