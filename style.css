@@ -8,29 +8,9 @@
     --cor4: #0D0D0D; /* Preto */
     --cor5: #ffffff; /* Cinza Azulado */
     --cor6: #6200ff; /* Branco (como cor adicional para contrastar) */
+    --cor7: #cca8f5dd; /* Branco (como cor adicional para contrastar) */
     text-align: center;
 }
-
-/* Para navegadores baseados em WebKit (Chrome, Safari) */
-::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
-}
-
-::-webkit-scrollbar-track {
-    background: var(--cor5); /* Cor do fundo da trilha da barra de rolagem */
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--cor1); /* Cor da parte móvel da barra de rolagem */
-    border-radius: 6px; /* Arredondamento das bordas da parte móvel */
-}
-
-/* Para navegadores baseados em Firefox */
-html {
-    scrollbar-color:  var(--cor5) var(--cor1); /* Cor da parte móvel e do fundo da barra de rolagem */
-    scrollbar-width: thin; /* Define a largura da barra de rolagem */
-}
-
 
 #aprensetacao{
     width: 100%;    
@@ -255,6 +235,25 @@ form button:hover {
 .hover-message{
     display: none;
 }
+/* Para navegadores baseados em WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cor5); /* Cor do fundo da trilha da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor1); /* Cor da parte móvel da barra de rolagem */
+    border-radius: 6px; /* Arredondamento das bordas da parte móvel */
+}
+
+/* Para navegadores baseados em Firefox */
+html {
+    scrollbar-color:  var(--cor1) var(--cor5); /* Cor da parte móvel e do fundo da barra de rolagem */
+    scrollbar-width: thin; /* Define a largura da barra de rolagem */
+}
 }
 
 /* Estilos Específicos para Dispositivos Paisagem */
@@ -335,8 +334,25 @@ form button:hover {
     opacity: 1;
     transition-delay: 0.5s; /* Adiciona um atraso de 0.3 segundos antes que a transição comece quando o mouse está sobre o elemento */
 }
+/* Para navegadores baseados em WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
 
+::-webkit-scrollbar-track {
+    background: var(--cor5); /* Cor do fundo da trilha da barra de rolagem */
+}
 
+::-webkit-scrollbar-thumb {
+    background: var(--cor1); /* Cor da parte móvel da barra de rolagem */
+    border-radius: 6px; /* Arredondamento das bordas da parte móvel */
+}
+
+/* Para navegadores baseados em Firefox */
+html {
+    scrollbar-color:  var(--cor5) var(--cor1); /* Cor da parte móvel e do fundo da barra de rolagem */
+    scrollbar-width: thin; /* Define a largura da barra de rolagem */
+}
 }
 
 footer {
