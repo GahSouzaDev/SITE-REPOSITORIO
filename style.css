@@ -2,14 +2,35 @@
 
 /* Variáveis de Cores */
 :root {
-    --cor1: #9B30FF; /* Roxo Escuro */
+    --cor1: #801ff7; /* Roxo Escuro */
     --cor2: #1c0043; /* Roxo Médio */
-    --cor3: #754227; /* Marrom */
+    --cor3: #5c19ba; /* Marrom */
     --cor4: #0D0D0D; /* Preto */
     --cor5: #ffffff; /* Cinza Azulado */
-    --cor6: #bdbdbd; /* Branco (como cor adicional para contrastar) */
+    --cor6: #000000; /* Branco (como cor adicional para contrastar) */
     text-align: center;
 }
+
+/* Para navegadores baseados em WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cor5); /* Cor do fundo da trilha da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor1); /* Cor da parte móvel da barra de rolagem */
+    border-radius: 6px; /* Arredondamento das bordas da parte móvel */
+}
+
+/* Para navegadores baseados em Firefox */
+html {
+    scrollbar-color:  var(--cor5) var(--cor1); /* Cor da parte móvel e do fundo da barra de rolagem */
+    scrollbar-width: thin; /* Define a largura da barra de rolagem */
+}
+
 
 #aprensetacao{
     width: 100%;    
@@ -55,7 +76,7 @@ header {
     background-position: center; /* Centraliza a imagem no elemento */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     height: 80px; /* Define a altura do nav conforme a imagem */
-    color: white;
+    color: var(--cor5);
     padding: 10px 0;
     position: fixed;
     top: 0;
@@ -73,7 +94,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--cor5);
     text-decoration: none;
     font-weight: bold;
 }
@@ -120,7 +141,7 @@ form input, form textarea {
 form button {
     padding: 10px;
     background-color: var(--cor1);
-    color: white;
+    color: var(--cor5);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -291,7 +312,7 @@ footer {
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     height: 120px; /* Define a altura do footer conforme a imagem */
     text-align: center; /* Centraliza o texto dentro do footer */
-    color: white; /* Cor do texto */
+    color: var(--cor5); /* Cor do texto */
     padding: 25px 0; /* Espaço interno no footer */
     margin-top: 30px; /* Espaço acima do footer, se necessário */
 }
