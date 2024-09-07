@@ -210,7 +210,7 @@ form button:hover {
         margin: 60px auto 0; /* Adiciona margem superior para acomodar o cabeçalho fixo */
     }
     nav ul li {
-        margin: 0 15px;
+        margin: 0 10px;
     }
     /* Estilos para a Foto de Perfil */
 .profile-container {
