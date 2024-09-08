@@ -41,4 +41,3 @@ document.getElementById('form')
       alert(JSON.stringify(err));
     });
 });
-

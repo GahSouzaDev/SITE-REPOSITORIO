@@ -161,10 +161,6 @@ form button:hover {
     padding: 10px;
 }
 
-.portfolio-item .portfolio-text {
-    text-align: left;
-}
-
 .portfolio-item .portfolio-image {
     text-align: right;
 }
@@ -180,7 +176,7 @@ form button:hover {
 }
 
 .portfolio-item.reversed .portfolio-text {
-    text-align: right;
+    text-align: left;
 }
 
 .portfolio-item.reversed .portfolio-image {
@@ -256,6 +252,9 @@ html {
 }
 .ajuste-mobile{
     display: none;    
+}
+.portfolio-item .portfolio-text {
+    text-align: left;
 }
 }
 
@@ -359,6 +358,9 @@ html {
 .ajuste-desktop{
     display: none;
 }
+.portfolio-item .portfolio-text {
+    text-align: right;
+}
 }
 
 footer {
@@ -375,4 +377,3 @@ footer {
 #copyright{
     margin-bottom: 5px;
 }
-
