@@ -45,6 +45,7 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--cor4);
     background-image: url('fundo.jpg');
     background-size: 100% auto; /* Ajusta a largura da imagem para 100% e a altura é ajustada automaticamente */
     background-position: top left; /* Posiciona a imagem no canto superior esquerdo */
@@ -215,7 +216,8 @@ form button:hover {
         margin: 60px auto 0; /* Adiciona margem superior para acomodar o cabeçalho fixo */
     }
     nav ul li {
-        margin: 0 10px;
+        margin: 0 7px;
+        font-size: 14px;
         
     }
     /* Estilos para a Foto de Perfil */
@@ -292,7 +294,8 @@ html {
         margin: 60px auto 0; /* Adiciona margem superior para acomodar o cabeçalho fixo */
     }
     nav ul li {
-        margin: 0 35px;
+        margin: 0 14px;
+        font-size: 15px;
     }
     /* Estilos para a Foto de Perfil */
 .profile-container {
@@ -385,3 +388,7 @@ footer {
 #copyright{
     margin-bottom: 5px;
 }
+
+#skills{
+    margin: 0 0 20px 0;
+} 
