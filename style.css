@@ -9,6 +9,7 @@
     --cor5: #ffffff; /* Cinza Azulado */
     --cor6: #6200ff; /* Branco (como cor adicional para contrastar) */
     --cor7: #cca8f5dd; /* Branco (como cor adicional para contrastar) */
+    --cor8: #0d0d0dca; /* Preto */
     text-align: center;
     }
 
@@ -38,17 +39,23 @@
 
 /* Estilos Gerais */
 html, body {
-    height: 100%;
-    margin: 0;
+    height: 100%; /* Garante que html e body ocupem 100% da altura da janela */
+    margin: 0; /* Remove margens padrão */
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--cor4);
+    background-image: url('fundo.jpg');
+    background-size: 100% auto; /* Ajusta a largura da imagem para 100% e a altura é ajustada automaticamente */
+    background-position: top left; /* Posiciona a imagem no canto superior esquerdo */
+    background-repeat: repeat-y; /* Repete a imagem verticalmente, para cobrir toda a altura do conteúdo */
+    background-attachment: scroll; /* Permite que o fundo role com o conteúdo da página */
     color: var(--cor5);
     display: flex;
     flex-direction: column;
 }
+
+
 
 header {    
     background-image: url('https://capsule-render.vercel.app/api?type=waving&color=9B30FF&height=120&section=header');
@@ -146,7 +153,7 @@ form button:hover {
 /* Estilos para a Seção de Portfólio */
 #portfolio {
     padding: 20px;
-    background-color: var(--cor4);
+    background-color: var(--cor8);
 }
 
 .portfolio-item {
