@@ -10,8 +10,11 @@
     --cor6: #6200ff; /* Branco (como cor adicional para contrastar) */
     --cor7: #cca8f5dd; /* Branco (como cor adicional para contrastar) */
     --cor8: #cca8f50c; /* Fundo do portfolio */
-    text-align: center;
+    text-align: center;    
     }
+#justificado{
+    text-align: justify;
+}
 
 #aprensetacao{
     width: 100%;    
