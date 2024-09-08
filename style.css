@@ -15,6 +15,9 @@
 #justificado{
     text-align: justify;
 }
+h3{
+    text-align: center;
+}
 
 #aprensetacao{
     width: 100%;    
@@ -212,6 +215,7 @@ form button:hover {
         max-width: 90%;
         margin: 0 auto;
     }
+  
     main {
         flex: 1;
         padding: 20px;
@@ -286,10 +290,11 @@ html {
         max-width: 45%; /* Permite que os itens ocupem mais espaço sem sobrepor */
     }
 
-    .portfolio-item .portfolio-image img {
+    .portfolio-item .portfolio-image  img {
         max-width: 100%;
         height: auto;
     }
+    
     main {
         flex: 1;
         padding: 20px;
