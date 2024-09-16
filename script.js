@@ -41,3 +41,14 @@ document.getElementById('form')
       alert(JSON.stringify(err));
     });
 });
+
+const parallax = document.querySelector('body');
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;   
+
+  let scrollDifference = currentScrollPos - prevScrollpos;
+  parallax.style.backgroundPositionY = prevScrollpos / 2 + 'px';
+  prevScrollpos = currentScrollPos;
+}

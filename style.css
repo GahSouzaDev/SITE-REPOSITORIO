@@ -53,14 +53,13 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--cor4);
     background-image: url('fundo.jpg');
-    background-size: 100% auto; /* Ajusta a largura da imagem para 100% e a altura é ajustada automaticamente */
-    background-position: top left; /* Posiciona a imagem no canto superior esquerdo */
+    background-size: cover; /* Ajusta a largura da imagem para 100% e a altura é ajustada automaticamente */
+    background-position: center top; /* Posiciona a imagem no canto superior esquerdo */
     background-repeat: repeat-y; /* Repete a imagem verticalmente, para cobrir toda a altura do conteúdo */
     background-attachment: scroll; /* Permite que o fundo role com o conteúdo da página */
     color: var(--cor5);
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 
 
