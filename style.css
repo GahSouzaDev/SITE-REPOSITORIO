@@ -222,7 +222,7 @@ form button:hover {
         margin: 60px auto 0; /* Adiciona margem superior para acomodar o cabeçalho fixo */
     }
     nav ul li {
-        margin: 0 7px;
+        margin: 0 5px;
         font-size: 14px;
         
     }
