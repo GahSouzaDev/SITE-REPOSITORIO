@@ -4,22 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emerson Gabriel | Full Stack Developer</title>
-    <meta name="description" content="Emerson Gabriel Souza, ou Gah Souza Dev, é um desenvolvedor full stack que cria sites, sistemas front-end e back-end para plataformas mobile e desktop.">
-    <meta name="keywords" content="desenvolvedor full stack, criação de sites, desenvolvimento front-end, desenvolvimento back-end, soluções mobile, soluções desktop, Gah Souza Dev">
-    <meta name="author" content="Emerson Gabriel Souza">
-    <meta property="og:title" content="Gah Souza Dev - Desenvolvedor Full Stack">
-    <meta property="og:description" content="Emerson Gabriel Souza, oferece serviços completos de desenvolvimento web e sistemas. Especializado em soluções front-end e back-end para web e dispositivos móveis.">
-    <meta property="og:image" content="https://i.imgur.com/3JQ4p6n.png">
-    <meta property="og:url" content="https://gahsouzadev.github.io">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gah Souza Dev - Desenvolvedor Full Stack">
-    <meta name="twitter:description" content="Emerson Gabriel Souza, desenvolvimento web e de sistemas. Oferece serviços completos de criação de sites e sistemas para diferentes plataformas.">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="icon" href="https://i.imgur.com/3JQ4p6n.png" type="image/png">
-    
     <style>
         :root {
             --primary: #9B30FF;
@@ -37,11 +24,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
         }
 
         body {
@@ -645,43 +627,6 @@
             z-index: 1;
         }
 
-        /* Badges de redes sociais */
-        .social-badges {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px 0;
-        }
-
-        .social-badge {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .social-badge.linkedin {
-            background: #0A66C2;
-            color: white;
-        }
-
-        .social-badge.github {
-            background: #121011;
-            color: white;
-        }
-
-        .social-badge.instagram {
-            background: #E4405F;
-            color: white;
-        }
-
-        .social-badge:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
         /* Responsividade */
         @media (max-width: 992px) {
             .about-content, .contact-content {
@@ -736,11 +681,6 @@
             .btn {
                 width: 100%;
                 text-align: center;
-            }
-
-            .social-badges {
-                flex-direction: column;
-                align-items: center;
             }
         }
 
@@ -820,7 +760,7 @@
             </div>
             
             <div class="about-image" data-aos="fade-left">
-                <img src="profile.png" alt="Emerson Gabriel" class="profile-img">
+                <img src="https://i.imgur.com/3JQ4p6n.png" alt="Emerson Gabriel" class="profile-img">
             </div>
         </div>
     </section>
@@ -835,48 +775,62 @@
             <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="200">
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="app">Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
                 <button class="filter-btn" data-filter="game">Games</button>
             </div>
             
             <div class="portfolio-grid">
                 <!-- AxMirrors -->
                 <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
-                    <img src="axmirrors.png" alt="AxMirrors" class="portfolio-img">
+                    <img src="https://i.imgur.com/5Xr2w7d.png" alt="AxMirrors" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3 class="portfolio-title">AxMirrors</h3>
                         <p class="portfolio-category">E-commerce • Web Design</p>
-                        <a href="https://axmirrors.com.br/" target="_blank" class="btn btn-primary" style="margin-top: 10px;">Ver Projeto</a>
                     </div>
                 </div>
                 
                 <!-- Umbra -->
                 <div class="portfolio-item" data-category="game" data-aos="fade-up" data-aos-delay="400">
-                    <img src="umbra.png" alt="Umbra" class="portfolio-img">
+                    <img src="https://i.imgur.com/7J9pX9x.png" alt="Umbra" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3 class="portfolio-title">Umbra: Guerra dos Espíritos</h3>
                         <p class="portfolio-category">Jogo • JavaScript</p>
-                        <a href="https://gahsouzadev.github.io/UMBRA/" target="_blank" class="btn btn-primary" style="margin-top: 10px;">Ver Projeto</a>
                     </div>
                 </div>
                 
                 <!-- OrganizeDay -->
-                <div class="portfolio-item" data-category="app" data-aos="fade-up" data-aos-delay="500">
-                    <img src="organizeday.png" alt="OrganizeDay" class="portfolio-img">
+                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://i.imgur.com/9zH2y2q.png" alt="OrganizeDay" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3 class="portfolio-title">OrganizeDay</h3>
                         <p class="portfolio-category">Produtividade • Web App</p>
-                        <a href="https://gahsouzadev.github.io/OrganizeDay/" target="_blank" class="btn btn-primary" style="margin-top: 10px;">Ver Projeto</a>
                     </div>
                 </div>
                 
                 <!-- Asthor Barden -->
                 <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="600">
-                    <img src="asthor.png" alt="Asthor Barden" class="portfolio-img">
+                    <img src="https://i.imgur.com/3vK7W4c.png" alt="Asthor Barden" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3 class="portfolio-title">Asthor Barden</h3>
                         <p class="portfolio-category">Educação • Plataforma</p>
-                        <a href="https://asthor-barden.github.io/AsthorBardenJogos/" target="_blank" class="btn btn-primary" style="margin-top: 10px;">Ver Projeto</a>
+                    </div>
+                </div>
+                
+                <!-- D.I.N.O. -->
+                <div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="700">
+                    <img src="https://i.imgur.com/k8N6qE5.png" alt="D.I.N.O." class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">D.I.N.O. Robot</h3>
+                        <p class="portfolio-category">IoT • Robótica</p>
+                    </div>
+                </div>
+                
+                <!-- Simulador Smartphone -->
+                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="800">
+                    <img src="https://i.imgur.com/T1dH8l2.png" alt="Simulador Smartphone" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Simulador Smartphone</h3>
+                        <p class="portfolio-category">Web • Interativo</p>
                     </div>
                 </div>
             </div>
@@ -918,7 +872,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Telefone</h4>
-                            <p>+55 (14) 9 9861-3741</p>
+                            <p>+55 (14) 98833-0666</p>
                         </div>
                     </div>
                     
@@ -928,20 +882,8 @@
                         </div>
                         <div class="contact-text">
                             <h4>WhatsApp</h4>
-                            <p>+55 (14) 9 9861-3741</p>
+                            <p>+55 (14) 98833-0666</p>
                         </div>
-                    </div>
-
-                    <div class="social-badges">
-                        <a href="https://www.linkedin.com/in/emerson-gabriel-souza-558841324/" target="_blank" class="social-badge linkedin">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="https://github.com/GahSouzaDev" target="_blank" class="social-badge github">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://www.instagram.com/gahsouzadev/" target="_blank" class="social-badge instagram">
-                            <i class="fab fa-instagram"></i> Instagram
-                        </a>
                     </div>
                 </div>
                 
@@ -972,6 +914,18 @@
     <!-- Footer -->
     <footer>
         <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://github.com/GahSouzaDev" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/emerson-gabriel-souza-558841324/" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/gahsouzadev/" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            
             <div class="footer-links">
                 <a href="#home">Início</a>
                 <a href="#about">Sobre</a>
@@ -989,7 +943,6 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         // Inicialização
         document.addEventListener('DOMContentLoaded', function() {
@@ -1110,9 +1063,6 @@
                 }
             });
             
-            // Inicializar EmailJS
-            emailjs.init('NQZvwCNXkOscBas-G');
-            
             // Form submission
             const contactForm = document.getElementById('contactForm');
             
@@ -1124,42 +1074,12 @@
                 submitBtn.innerHTML = 'Enviando...';
                 submitBtn.disabled = true;
                 
-                // Enviar email usando EmailJS
-                emailjs.sendForm('default_service', 'template_0518glm', this)
-                    .then(() => {
-                        alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-                        contactForm.reset();
-                        submitBtn.innerHTML = 'Enviar Mensagem';
-                        submitBtn.disabled = false;
-                    }, (error) => {
-                        alert('Ocorreu um erro. Tente novamente ou entre em contato diretamente por email.');
-                        submitBtn.innerHTML = 'Enviar Mensagem';
-                        submitBtn.disabled = false;
-                    });
-            });
-
-            // Prevenir rolagem lateral
-            document.body.style.overflowX = 'hidden';
-            window.addEventListener('resize', function() {
-                document.body.style.overflowX = 'hidden';
-            });
-        });
-
-        // Navegação suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                setTimeout(() => {
+                    alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+                    contactForm.reset();
+                    submitBtn.innerHTML = 'Enviar Mensagem';
+                    submitBtn.disabled = false;
+                }, 2000);
             });
         });
     </script>
