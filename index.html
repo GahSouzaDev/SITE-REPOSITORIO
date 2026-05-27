@@ -2,270 +2,339 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gah Souza Dev — Robótica, IA & Desenvolvimento</title>
-    <meta name="description" content="Emerson Gabriel (Gah Souza Dev) — Desenvolvedor Full Stack, criador de robótica educacional, automação e inteligência artificial com ESP32, visão computacional e muito mais.">
-    <meta name="keywords" content="robótica educacional, ESP32, visão computacional, braço robótico, rover, automação, IA, full stack developer, Gah Souza Dev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Gah Souza Dev — Engenharia de Software, Robótica & IA</title>
+    <meta name="description" content="Emerson Gabriel (Gah Souza Dev) — Desenvolvedor Full Stack, criador de robótica educacional, automação e inteligência artificial com ESP32, visão computacional e sistemas embarcados.">
+    <meta name="keywords" content="robótica educacional, ESP32, visão computacional, braço robótico, rover, automação, IA, full stack developer, engenharia de software, Gah Souza Dev">
     <meta property="og:title" content="Gah Souza Dev — Robótica, IA & Desenvolvimento">
-    <meta property="og:description" content="Mini-documentários, projetos open-source e código para quem quer construir o futuro com as próprias mãos.">
+    <meta property="og:description" content="Mini-documentários, projetos open-source e código para quem constrói o futuro com as próprias mãos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gahsouzadev.github.io">
+    <meta property="og:image" content="https://gahsouzadev.github.io/profile.png">
     <link rel="icon" href="profile.png" type="image/png">
 
+    <!-- Fonts com swap e fallback precisos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         /* ============================================================
-           DESIGN SYSTEM
+           DESIGN SYSTEM — Gah Souza Dev
+           Precisão absoluta, contraste impecável, movimento com propósito.
         ============================================================ */
         :root {
-            --gold:       #D98E04;
-            --gold-deep:  #D97904;
-            --white:      #FCFCFC;
-            --black:      #030304;
-            --gray-900:   #0d0d0e;
-            --gray-800:   #141415;
-            --gray-700:   #1e1e20;
-            --gray-600:   #2a2a2d;
-            --gray-400:   #6b6b72;
-            --gray-200:   #c4c4cc;
-            --mono: 'DM Mono', monospace;
-            --sans: 'DM Sans', sans-serif;
-            --display: 'Syne', sans-serif;
-            --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
-            --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
-            --nav-h: 72px;
+            /* Cores principais */
+            --gold:        #D98E04;
+            --gold-deep:   #C17D03;
+            --gold-pale:   #F5B041;
+            --white:       #FCFCFC;
+            --black:       #030304;
+            --gray-950:    #0A0A0B;
+            --gray-900:    #0F0F10;
+            --gray-800:    #18181B;
+            --gray-700:    #222226;
+            --gray-600:    #2E2E33;
+            --gray-500:    #52525B;
+            --gray-400:    #71717A;
+            --gray-300:    #A1A1AA;
+            --gray-200:    #D4D4D8;
+            --gray-100:    #F4F4F5;
+
+            /* Tipografia */
+            --font-display: 'Syne', sans-serif;
+            --font-mono:    'DM Mono', monospace;
+            --font-sans:    'DM Sans', sans-serif;
+
+            /* Espaçamento & grid */
+            --nav-height:  80px;
+            --container-max: 1280px;
+            --gap-section: 120px;
+            --gap-grid:    80px;
+            --radius-sm:   2px;
+            --radius-md:   4px;
+            --radius-lg:   8px;
+
+            /* Transições */
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
         }
 
-        /* ============================================================
-           RESET & BASE
-        ============================================================ */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; font-size: 16px; }
+        /* Reset absoluto */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
         body {
-            font-family: var(--sans);
+            font-family: var(--font-sans);
             background: var(--black);
             color: var(--white);
-            overflow-x: hidden;
             line-height: 1.6;
+            overflow-x: hidden;
             cursor: none;
+            isolation: isolate;
         }
-        img { display: block; max-width: 100%; }
+
+        /* Seleção estilizada */
+        ::selection {
+            background: var(--gold);
+            color: var(--black);
+            text-shadow: none;
+        }
+
+        /* Scrollbar mínima e elegante */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 0; }
+
+        /* Imagens responsivas por padrão */
+        img { display: block; max-width: 100%; height: auto; }
+
+        /* Links sem sublinhado */
         a { color: inherit; text-decoration: none; }
-        button { font-family: inherit; cursor: none; border: none; background: none; }
-        ul { list-style: none; }
-        ::selection { background: var(--gold); color: var(--black); }
+
+        /* Botões reset */
+        button {
+            font-family: inherit;
+            cursor: none;
+            border: none;
+            background: none;
+            color: inherit;
+        }
+
+        ul, ol { list-style: none; }
 
         /* ============================================================
-           CUSTOM CURSOR
+           CUSTOM CURSOR — Precisão milimétrica
         ============================================================ */
-        .cursor {
+        .cursor-dot,
+        .cursor-ring {
             position: fixed;
+            top: 0;
+            left: 0;
             pointer-events: none;
             z-index: 99999;
-            mix-blend-mode: difference;
+            will-change: transform;
         }
         .cursor-dot {
-            width: 8px; height: 8px;
+            width: 6px;
+            height: 6px;
             background: var(--gold);
             border-radius: 50%;
+            mix-blend-mode: difference;
             transform: translate(-50%, -50%);
-            transition: transform 0.1s var(--ease-expo), opacity 0.2s;
         }
         .cursor-ring {
-            width: 36px; height: 36px;
-            border: 1.5px solid var(--gold);
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid rgba(217, 142, 4, 0.5);
             border-radius: 50%;
+            mix-blend-mode: difference;
             transform: translate(-50%, -50%);
-            transition: transform 0.18s var(--ease-expo), width 0.3s var(--ease-back), height 0.3s var(--ease-back), opacity 0.2s;
-            opacity: 0.6;
+            transition: width 0.3s var(--ease-out-back), height 0.3s var(--ease-out-back), border-color 0.3s;
         }
-        body.cursor-hover .cursor-ring { width: 60px; height: 60px; opacity: 1; }
-        body.cursor-hover .cursor-dot { transform: translate(-50%, -50%) scale(0); }
-
-        /* ============================================================
-           SCROLLBAR
-        ============================================================ */
-        ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: var(--black); }
-        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
-
-        /* ============================================================
-           NOISE OVERLAY
-        ============================================================ */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 99990;
-            opacity: 0.35;
+        /* Estado hover do cursor */
+        body.cursor-hover .cursor-ring {
+            width: 64px;
+            height: 64px;
+            border-color: var(--gold);
+            background: rgba(217, 142, 4, 0.05);
+        }
+        body.cursor-hover .cursor-dot {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
         }
 
         /* ============================================================
-           TYPOGRAPHY UTILITIES
+           UTILITÁRIOS TIPOGRÁFICOS
         ============================================================ */
-        .label {
-            font-family: var(--mono);
-            font-size: 0.72rem;
-            letter-spacing: 0.18em;
+        .label-mono {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
             color: var(--gold);
+            display: block;
+            margin-bottom: 16px;
         }
-        .display-xl {
-            font-family: var(--display);
-            font-size: clamp(3.5rem, 8vw, 7.5rem);
+        .heading-xl {
+            font-family: var(--font-display);
+            font-size: clamp(3.25rem, 7vw, 7rem);
             font-weight: 800;
             line-height: 0.95;
             letter-spacing: -0.03em;
         }
-        .display-lg {
-            font-family: var(--display);
-            font-size: clamp(2rem, 4vw, 3.5rem);
+        .heading-lg {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4vw, 3.8rem);
             font-weight: 700;
             line-height: 1.05;
             letter-spacing: -0.02em;
         }
-        .section-title {
-            font-family: var(--display);
-            font-size: clamp(1.8rem, 3vw, 2.8rem);
-            font-weight: 800;
+        .heading-md {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+            font-weight: 700;
             letter-spacing: -0.02em;
         }
-
-        /* ============================================================
-           LAYOUT UTILITIES
-        ============================================================ */
-        .container { width: min(90%, 1200px); margin: 0 auto; }
-        .section { padding: 120px 0; }
-        .section-header { margin-bottom: 80px; }
-        .divider {
-            width: 48px; height: 2px;
+        .divider-gold {
+            width: 56px;
+            height: 2px;
             background: var(--gold);
             margin: 24px 0;
+            border-radius: 1px;
         }
 
         /* ============================================================
-           BUTTONS
+           BOTÕES
         ============================================================ */
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-            padding: 14px 28px;
-            font-family: var(--display);
+            padding: 14px 32px;
+            font-family: var(--font-display);
             font-weight: 600;
             font-size: 0.9rem;
             letter-spacing: 0.02em;
-            border-radius: 2px;
-            transition: all 0.3s var(--ease-expo);
+            border-radius: var(--radius-sm);
+            transition: all 0.35s var(--ease-out-expo);
             position: relative;
             overflow: hidden;
+            white-space: nowrap;
+            background: transparent;
+            border: 1.5px solid transparent;
         }
-        .btn::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--white);
-            transform: translateX(-101%);
-            transition: transform 0.4s var(--ease-expo);
-            z-index: -1;
-        }
-        .btn:hover::after { transform: translateX(0); }
-        .btn-gold {
+        .btn-primary {
             background: var(--gold);
             color: var(--black);
-            z-index: 0;
+            border-color: var(--gold);
+            font-weight: 700;
         }
-        .btn-gold::after { background: var(--gold-deep); }
-        .btn-gold:hover { color: var(--black); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(217, 142, 4, 0.35); }
+        .btn-primary:hover {
+            background: var(--gold-deep);
+            border-color: var(--gold-deep);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(217, 142, 4, 0.3);
+        }
         .btn-outline {
-            border: 1.5px solid rgba(252,252,252,0.2);
+            border-color: rgba(252, 252, 252, 0.25);
             color: var(--white);
-            z-index: 0;
         }
-        .btn-outline:hover { color: var(--black); transform: translateY(-2px); }
-        .btn-sm { padding: 10px 20px; font-size: 0.8rem; }
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--black);
+            border-color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+        }
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 0.8rem;
+        }
 
         /* ============================================================
-           NAV
+           NAVEGAÇÃO PRINCIPAL — Fixa, vidro fosco, sem falhas
         ============================================================ */
-        #nav {
+        #main-nav {
             position: fixed;
-            top: 0; left: 0; width: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
             z-index: 1000;
-            height: var(--nav-h);
             display: flex;
             align-items: center;
-            transition: background 0.4s, backdrop-filter 0.4s;
+            transition: background 0.4s, backdrop-filter 0.4s, box-shadow 0.4s;
         }
-        #nav.scrolled {
-            background: rgba(3, 3, 4, 0.92);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+        #main-nav.scrolled {
+            background: rgba(3, 3, 4, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 rgba(255,255,255,0.06);
         }
-        .nav-inner {
+        .nav-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 100%;
+            width: min(92%, var(--container-max));
+            margin: 0 auto;
         }
         .nav-logo {
-            font-family: var(--display);
+            font-family: var(--font-display);
             font-weight: 800;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             letter-spacing: -0.02em;
+            color: var(--white);
         }
         .nav-logo span { color: var(--gold); }
-        .nav-menu {
+        .nav-links {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 48px;
         }
         .nav-link {
-            font-family: var(--mono);
-            font-size: 0.78rem;
-            letter-spacing: 0.12em;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--gray-200);
-            transition: color 0.2s;
+            color: var(--gray-300);
+            transition: color 0.25s;
             position: relative;
         }
         .nav-link::after {
             content: '';
             position: absolute;
-            bottom: -4px; left: 0;
-            width: 0; height: 1px;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
             background: var(--gold);
-            transition: width 0.3s var(--ease-expo);
+            transition: width 0.3s var(--ease-out-expo);
         }
         .nav-link:hover { color: var(--white); }
         .nav-link:hover::after { width: 100%; }
-        .nav-cta { display: flex; align-items: center; gap: 16px; }
 
-        /* Mobile nav */
-        .nav-hamburger {
+        /* Hamburguer mobile */
+        .nav-toggle {
             display: none;
             flex-direction: column;
             gap: 5px;
-            padding: 6px;
+            padding: 8px;
+            z-index: 1001;
         }
-        .nav-hamburger span {
+        .nav-toggle span {
             display: block;
-            width: 24px; height: 1.5px;
+            width: 26px;
+            height: 2px;
             background: var(--white);
-            transition: all 0.3s var(--ease-expo);
+            transition: all 0.3s var(--ease-out-expo);
             transform-origin: center;
         }
-        .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-        .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-        .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+        .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-        .nav-mobile {
+        /* Menu mobile overlay */
+        .mobile-menu {
             position: fixed;
             inset: 0;
-            background: var(--black);
+            background: rgba(3, 3, 4, 0.98);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             z-index: 999;
             display: flex;
             flex-direction: column;
@@ -273,488 +342,472 @@
             justify-content: center;
             gap: 48px;
             transform: translateY(-100%);
-            transition: transform 0.5s var(--ease-expo);
+            transition: transform 0.5s var(--ease-out-expo);
         }
-        .nav-mobile.open { transform: translateY(0); }
-        .nav-mobile .nav-link {
-            font-family: var(--display);
-            font-size: 2.5rem;
+        .mobile-menu.open { transform: translateY(0); }
+        .mobile-menu .nav-link {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
             font-weight: 700;
             letter-spacing: -0.02em;
             text-transform: none;
             color: var(--white);
         }
-        .nav-mobile .nav-link:hover { color: var(--gold); }
-        .nav-mobile .nav-link::after { display: none; }
+        .mobile-menu .nav-link:hover { color: var(--gold); }
 
         /* ============================================================
-           HERO
+           HERO — Impacto vertical com grid de fundo e glows
         ============================================================ */
         #hero {
             min-height: 100vh;
-            display: grid;
-            align-items: end;
-            padding-bottom: 80px;
-            padding-top: var(--nav-h);
+            display: flex;
+            align-items: center;
+            padding-top: var(--nav-height);
             position: relative;
             overflow: hidden;
+            isolation: isolate;
         }
-        .hero-grid-bg {
+        .hero-bg-grid {
             position: absolute;
             inset: 0;
             background-image:
                 linear-gradient(rgba(217, 142, 4, 0.04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(217, 142, 4, 0.04) 1px, transparent 1px);
-            background-size: 60px 60px;
-        }
-        .hero-glow {
-            position: absolute;
-            width: 700px; height: 700px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(217,142,4,0.12) 0%, transparent 70%);
-            top: -200px; right: -200px;
+            background-size: 64px 64px;
             pointer-events: none;
         }
-        .hero-glow-2 {
+        .hero-glow-primary {
             position: absolute;
-            width: 400px; height: 400px;
+            width: 800px;
+            height: 800px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(217,121,4,0.08) 0%, transparent 70%);
-            bottom: 0; left: 30%;
+            background: radial-gradient(circle, rgba(217,142,4,0.1) 0%, transparent 70%);
+            top: -300px;
+            right: -200px;
+            pointer-events: none;
+        }
+        .hero-glow-secondary {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(217,142,4,0.07) 0%, transparent 70%);
+            bottom: -100px;
+            left: 20%;
             pointer-events: none;
         }
         .hero-content {
             position: relative;
             z-index: 2;
+            width: min(92%, var(--container-max));
+            margin: 0 auto;
+            padding: 40px 0 80px;
         }
         .hero-overline {
             display: flex;
             align-items: center;
             gap: 16px;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
         }
-        .hero-overline-line { width: 48px; height: 1px; background: var(--gold); }
-        .hero-name { margin-bottom: 24px; }
-        .hero-name em {
+        .hero-overline-line {
+            width: 64px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .hero-title {
+            margin-bottom: 28px;
+        }
+        .hero-title em {
             font-style: normal;
             color: var(--gold);
             position: relative;
         }
-        .hero-sub {
-            font-size: clamp(1rem, 1.8vw, 1.25rem);
-            color: var(--gray-200);
-            max-width: 520px;
-            font-weight: 300;
+        .hero-subtitle {
+            font-size: clamp(1rem, 1.6vw, 1.25rem);
+            color: var(--gray-300);
+            max-width: 540px;
+            font-weight: 350;
             margin-bottom: 56px;
             line-height: 1.7;
         }
-        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-        .hero-scroll-hint {
-            position: absolute;
-            bottom: 40px; left: 50%;
-            transform: translateX(-50%);
+        .hero-actions {
             display: flex;
-            flex-direction: column;
+            gap: 16px;
+            flex-wrap: wrap;
             align-items: center;
-            gap: 8px;
-            z-index: 2;
         }
-        .hero-scroll-hint span {
-            font-family: var(--mono);
-            font-size: 0.65rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--gray-400);
-        }
-        .scroll-line {
-            width: 1px; height: 60px;
-            background: linear-gradient(to bottom, var(--gold), transparent);
-            animation: scrollLine 2s ease-in-out infinite;
-        }
-        @keyframes scrollLine {
-            0%, 100% { transform: scaleY(1); opacity: 1; }
-            50% { transform: scaleY(0.4); opacity: 0.4; }
-        }
-
-        /* Hero stats strip */
+        /* Stats strip dentro do hero */
         .hero-stats {
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            background: rgba(14,14,15,0.8);
-            backdrop-filter: blur(8px);
-            border-top: 1px solid rgba(255,255,255,0.06);
-            padding: 28px 0;
-            z-index: 3;
-        }
-        .stats-row {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-wrap: wrap;
             gap: 0;
+            margin-top: 80px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 36px;
         }
         .stat-item {
-            flex: 1;
-            text-align: center;
-            padding: 0 32px;
+            flex: 1 1 150px;
+            padding: 0 40px 0 0;
             border-right: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 16px;
         }
         .stat-item:last-child { border-right: none; }
         .stat-num {
-            font-family: var(--display);
-            font-size: 2rem;
+            font-family: var(--font-display);
+            font-size: 2.2rem;
             font-weight: 800;
             color: var(--gold);
             line-height: 1;
         }
         .stat-label {
-            font-family: var(--mono);
+            font-family: var(--font-mono);
             font-size: 0.65rem;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
             color: var(--gray-400);
-            margin-top: 6px;
+            margin-top: 8px;
+        }
+
+        /* Scroll hint inferior */
+        .scroll-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-top: 60px;
+            color: var(--gray-500);
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+        .scroll-line-animated {
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 1; transform: scaleY(1); }
+            50% { opacity: 0.3; transform: scaleY(0.5); }
         }
 
         /* ============================================================
-           SOBRE
+           SEÇÕES GERAIS
         ============================================================ */
-        #sobre { background: var(--gray-900); }
-        .sobre-grid {
+        .section {
+            padding: var(--gap-section) 0;
+            position: relative;
+        }
+        .section-dark { background: var(--gray-950); }
+        .section-black { background: var(--black); }
+        .container {
+            width: min(92%, var(--container-max));
+            margin: 0 auto;
+        }
+        .section-header {
+            margin-bottom: 64px;
+        }
+
+        /* ============================================================
+           SOBRE — Grid com imagem e texto perfeitamente alinhados
+        ============================================================ */
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
+            gap: var(--gap-grid);
+            align-items: center;
         }
-        .sobre-visual {
+        .about-image-wrapper {
             position: relative;
-        }
-        .sobre-img-wrap {
-            position: relative;
-            border-radius: 4px;
+            border-radius: var(--radius-md);
             overflow: hidden;
+            background: var(--gray-800);
         }
-        .sobre-img-wrap::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(217,142,4,0.15), transparent);
-            z-index: 1;
-            pointer-events: none;
-        }
-        .sobre-img {
+        .about-image {
             width: 100%;
             aspect-ratio: 4/5;
             object-fit: cover;
-            filter: grayscale(30%) contrast(1.05);
-            transition: filter 0.4s;
+            filter: grayscale(25%) contrast(1.05);
+            transition: filter 0.5s;
         }
-        .sobre-img:hover { filter: grayscale(0%) contrast(1); }
-        .sobre-badge {
+        .about-image-wrapper:hover .about-image {
+            filter: grayscale(0%) contrast(1.1);
+        }
+        .about-badge {
             position: absolute;
-            bottom: -20px; right: -20px;
+            bottom: 24px;
+            right: 24px;
             background: var(--gold);
             color: var(--black);
-            padding: 20px 24px;
-            border-radius: 2px;
-            z-index: 2;
+            padding: 16px 24px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.5);
         }
-        .sobre-badge-num {
-            font-family: var(--display);
+        .about-badge-number {
+            font-family: var(--font-display);
             font-size: 2.5rem;
             font-weight: 800;
             line-height: 1;
         }
-        .sobre-badge-text {
-            font-family: var(--mono);
-            font-size: 0.65rem;
-            letter-spacing: 0.12em;
+        .about-badge-text {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            margin-top: 4px;
         }
-        .sobre-text { padding-top: 20px; }
-        .sobre-text p {
-            color: var(--gray-200);
+        .about-text p {
             font-size: 1.05rem;
+            color: var(--gray-200);
+            margin-bottom: 20px;
             line-height: 1.8;
-            margin-bottom: 24px;
-            font-weight: 300;
+            font-weight: 350;
         }
-        .sobre-text p strong { color: var(--white); font-weight: 500; }
-        .sobre-tags {
+        .about-text strong { color: var(--white); font-weight: 600; }
+        .tech-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 36px;
+            margin-top: 32px;
         }
-        .tag {
-            font-family: var(--mono);
-            font-size: 0.72rem;
-            letter-spacing: 0.1em;
-            padding: 7px 14px;
+        .tech-tag {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            padding: 7px 16px;
             border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 2px;
-            color: var(--gray-200);
+            border-radius: var(--radius-sm);
+            color: var(--gray-300);
             transition: all 0.25s;
         }
-        .tag:hover {
+        .tech-tag:hover {
             border-color: var(--gold);
             color: var(--gold);
             background: rgba(217,142,4,0.06);
         }
 
         /* ============================================================
-           YOUTUBE / CANAL
+           CANAL — Layout assimétrico com destaque visual
         ============================================================ */
-        #canal {
-            background: var(--black);
-            position: relative;
-            overflow: hidden;
-        }
-        .canal-bg-text {
-            position: absolute;
-            bottom: -40px; right: -20px;
-            font-family: var(--display);
-            font-size: clamp(6rem, 15vw, 14rem);
-            font-weight: 800;
-            color: rgba(217,142,4,0.04);
-            letter-spacing: -0.05em;
-            pointer-events: none;
-            user-select: none;
-            line-height: 1;
-        }
-        .canal-grid {
+        .channel-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: var(--gap-grid);
             align-items: center;
         }
-        .canal-text .section-title { margin-bottom: 24px; }
-        .canal-text p {
+        .channel-text .heading-lg { margin-bottom: 28px; }
+        .channel-text p {
             color: var(--gray-200);
-            font-size: 1.05rem;
+            font-size: 1rem;
             line-height: 1.8;
-            font-weight: 300;
-            margin-bottom: 20px;
+            font-weight: 350;
+            margin-bottom: 36px;
         }
-        .canal-features {
-            margin: 36px 0;
+        .feature-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
+            margin-bottom: 40px;
         }
-        .canal-feature {
+        .feature-item {
             display: flex;
             align-items: flex-start;
-            gap: 16px;
+            gap: 20px;
             padding: 20px;
             border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 2px;
+            border-radius: var(--radius-sm);
             transition: all 0.3s;
+            background: rgba(255,255,255,0.02);
         }
-        .canal-feature:hover {
-            border-color: rgba(217,142,4,0.3);
-            background: rgba(217,142,4,0.04);
-            transform: translateX(6px);
+        .feature-item:hover {
+            border-color: rgba(217,142,4,0.25);
+            background: rgba(217,142,4,0.03);
+            transform: translateX(8px);
         }
-        .canal-feature-icon {
-            width: 40px; height: 40px;
-            background: rgba(217,142,4,0.12);
-            border-radius: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .feature-icon {
+            font-size: 1.3rem;
             color: var(--gold);
-            font-size: 1rem;
-            flex-shrink: 0;
+            width: 36px;
+            text-align: center;
         }
-        .canal-feature-text h4 {
-            font-family: var(--display);
-            font-size: 0.9rem;
+        .feature-title {
+            font-family: var(--font-display);
             font-weight: 700;
+            font-size: 0.95rem;
             margin-bottom: 4px;
         }
-        .canal-feature-text p {
-            font-size: 0.85rem;
+        .feature-desc {
+            font-size: 0.8rem;
             color: var(--gray-400);
-            margin: 0;
             line-height: 1.5;
         }
-        .canal-visual { position: relative; }
-        .canal-embed-wrap {
-            position: relative;
-            border-radius: 4px;
-            overflow: hidden;
+        .channel-preview {
             border: 1px solid rgba(255,255,255,0.08);
-            box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(217,142,4,0.1);
-        }
-        .canal-embed-placeholder {
-            aspect-ratio: 16/9;
+            border-radius: var(--radius-md);
+            overflow: hidden;
             background: var(--gray-800);
+            box-shadow: 0 32px 64px rgba(0,0,0,0.5);
+        }
+        .video-placeholder {
+            aspect-ratio: 16/9;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 16px;
+            background: linear-gradient(135deg, #1a1a1e, #0a0a0b);
+            cursor: pointer;
+            transition: background 0.3s;
         }
-        .canal-play-btn {
-            width: 72px; height: 72px;
+        .video-placeholder:hover {
+            background: linear-gradient(135deg, #222, #111);
+        }
+        .play-circle {
+            width: 72px;
+            height: 72px;
             background: var(--gold);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--black);
-            transition: all 0.3s var(--ease-back);
+            transition: transform 0.3s var(--ease-out-back), box-shadow 0.3s;
         }
-        .canal-embed-wrap:hover .canal-play-btn {
-            transform: scale(1.15);
-            box-shadow: 0 0 0 16px rgba(217,142,4,0.15);
+        .video-placeholder:hover .play-circle {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 20px rgba(217, 142, 4, 0.15);
         }
-        .canal-sub-strip {
+        .channel-bar {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 16px 20px;
-            background: var(--gray-800);
+            background: var(--gray-900);
             border-top: 1px solid rgba(255,255,255,0.06);
+            font-size: 0.8rem;
         }
-        .canal-sub-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .yt-icon { color: #FF0000; font-size: 1.4rem; }
-        .canal-sub-text {
-            font-family: var(--mono);
-            font-size: 0.75rem;
-            color: var(--gray-200);
-        }
-        .canal-sub-text strong { color: var(--white); font-weight: 500; }
 
         /* ============================================================
-           PROJETOS
+           PROJETOS — Cards refinados com filtro
         ============================================================ */
-        #projetos { background: var(--gray-900); }
-        .projetos-tabs {
+        .filter-bar {
             display: flex;
-            gap: 4px;
-            margin-bottom: 60px;
-            background: var(--gray-800);
-            padding: 4px;
-            border-radius: 2px;
-            width: fit-content;
+            gap: 8px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
         }
-        .tab-btn {
-            font-family: var(--mono);
-            font-size: 0.72rem;
-            letter-spacing: 0.12em;
+        .filter-btn {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            padding: 10px 20px;
-            border-radius: 1px;
+            padding: 10px 22px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-sm);
             color: var(--gray-400);
             transition: all 0.25s;
+            background: transparent;
         }
-        .tab-btn.active {
+        .filter-btn.active {
             background: var(--gold);
             color: var(--black);
+            border-color: var(--gold);
         }
-        .tab-btn:hover:not(.active) { color: var(--white); }
-
-        .projetos-grid {
+        .filter-btn:hover:not(.active) {
+            color: var(--white);
+            border-color: rgba(255,255,255,0.3);
+        }
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 28px;
         }
-        .projeto-card {
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 2px;
-            overflow: hidden;
-            transition: all 0.4s var(--ease-expo);
+        .project-card {
             background: var(--gray-800);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.4s var(--ease-out-expo);
             display: flex;
             flex-direction: column;
         }
-        .projeto-card:hover {
-            border-color: rgba(217,142,4,0.3);
-            transform: translateY(-6px);
-            box-shadow: 0 24px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(217,142,4,0.15);
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(217,142,4,0.4);
+            box-shadow: 0 28px 56px rgba(0,0,0,0.5), 0 0 0 1px rgba(217,142,4,0.2);
         }
-        .projeto-img-wrap {
+        .card-image-wrap {
             position: relative;
             aspect-ratio: 16/9;
-            overflow: hidden;
             background: var(--gray-700);
+            overflow: hidden;
         }
-        .projeto-img {
-            width: 100%; height: 100%;
+        .card-image {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            transition: transform 0.6s var(--ease-expo);
-            filter: grayscale(20%);
+            transition: transform 0.6s var(--ease-out-expo);
         }
-        .projeto-card:hover .projeto-img { transform: scale(1.06); filter: grayscale(0%); }
-        .projeto-img-placeholder {
-            width: 100%; height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--gray-600);
-            background: linear-gradient(135deg, var(--gray-700), var(--gray-800));
-        }
-        .projeto-cat-badge {
+        .project-card:hover .card-image { transform: scale(1.05); }
+        .card-category-badge {
             position: absolute;
-            top: 12px; left: 12px;
-            font-family: var(--mono);
-            font-size: 0.62rem;
+            top: 16px;
+            left: 16px;
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            padding: 5px 10px;
-            background: rgba(3,3,4,0.85);
-            border: 1px solid rgba(217,142,4,0.4);
+            padding: 5px 12px;
+            background: rgba(3,3,4,0.8);
+            border: 1px solid rgba(217,142,4,0.5);
             color: var(--gold);
-            border-radius: 1px;
-            backdrop-filter: blur(4px);
+            border-radius: var(--radius-sm);
         }
-        .projeto-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-        .projeto-title {
-            font-family: var(--display);
-            font-size: 1.15rem;
+        .card-body {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -0.01em;
+            margin-bottom: 12px;
         }
-        .projeto-desc {
-            font-size: 0.875rem;
+        .card-description {
+            font-size: 0.85rem;
             color: var(--gray-400);
             line-height: 1.65;
             flex: 1;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
-        .projeto-tech {
+        .tech-chips {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
-        .tech-chip {
-            font-family: var(--mono);
-            font-size: 0.65rem;
-            padding: 4px 8px;
+        .chip {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            padding: 4px 10px;
             background: rgba(255,255,255,0.05);
-            border-radius: 1px;
-            color: var(--gray-200);
+            border-radius: var(--radius-sm);
+            color: var(--gray-300);
         }
-        .projeto-footer {
+        .card-footer {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 20px;
             display: flex;
             align-items: center;
             gap: 12px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.06);
         }
-        .projeto-link {
-            font-family: var(--mono);
-            font-size: 0.72rem;
+        .project-link {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--gold);
@@ -763,259 +816,148 @@
             gap: 6px;
             transition: gap 0.2s;
         }
-        .projeto-link:hover { gap: 10px; }
+        .project-link:hover { gap: 12px; }
 
         /* ============================================================
-           TUTORIAIS / RECURSOS
+           RECURSOS — Grid de preview com coming soon
         ============================================================ */
-        #recursos { background: var(--black); }
-        .recursos-coming-soon {
+        .resources-coming {
             text-align: center;
-            padding: 80px 40px;
-            border: 1px dashed rgba(217,142,4,0.3);
-            border-radius: 4px;
-            position: relative;
-            overflow: hidden;
+            padding: 60px 40px;
+            border: 1px dashed rgba(217,142,4,0.25);
+            border-radius: var(--radius-md);
+            margin-bottom: 64px;
+            background: rgba(217,142,4,0.02);
         }
-        .recursos-coming-soon::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(217,142,4,0.03), transparent);
-        }
-        .coming-icon {
-            font-size: 3rem;
-            color: var(--gold);
-            margin-bottom: 24px;
-            animation: pulse 3s ease-in-out infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        .coming-title {
-            font-family: var(--display);
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        .coming-sub {
-            color: var(--gray-400);
-            max-width: 500px;
-            margin: 0 auto 36px;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        .recursos-preview-grid {
+        .resources-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
         }
-        .recurso-preview {
+        .resource-card {
             padding: 28px 24px;
             border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 2px;
-            text-align: left;
+            border-radius: var(--radius-sm);
             transition: all 0.3s;
             background: var(--gray-900);
         }
-        .recurso-preview:hover {
+        .resource-card:hover {
             border-color: rgba(217,142,4,0.3);
             transform: translateY(-4px);
+            background: var(--gray-800);
         }
-        .recurso-preview-icon {
+        .resource-icon {
             font-size: 1.8rem;
             color: var(--gold);
-            margin-bottom: 16px;
-        }
-        .recurso-preview h4 {
-            font-family: var(--display);
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .recurso-preview p {
-            font-size: 0.82rem;
-            color: var(--gray-400);
-            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         /* ============================================================
-           CONTATO
+           CONTATO — Dualidade clara
         ============================================================ */
-        #contato { background: var(--gray-900); }
-        .contato-grid {
+        .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            gap: var(--gap-grid);
             align-items: start;
         }
-        .contato-text .section-title { margin-bottom: 24px; }
-        .contato-text p {
-            color: var(--gray-200);
-            font-size: 1.05rem;
-            line-height: 1.8;
-            font-weight: 300;
-            margin-bottom: 48px;
-        }
-        .contato-links {
+        .contact-links-list {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
+            margin-top: 36px;
         }
-        .contato-link-item {
+        .contact-link-card {
             display: flex;
             align-items: center;
-            gap: 16px;
-            padding: 18px 20px;
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 2px;
+            gap: 18px;
+            padding: 18px 22px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-sm);
             transition: all 0.3s;
-            text-decoration: none;
             color: var(--white);
         }
-        .contato-link-item:hover {
+        .contact-link-card:hover {
             border-color: rgba(217,142,4,0.4);
-            background: rgba(217,142,4,0.05);
+            background: rgba(217,142,4,0.04);
             transform: translateX(8px);
         }
-        .contato-link-icon {
-            width: 44px; height: 44px;
-            background: rgba(217,142,4,0.1);
-            border-radius: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            color: var(--gold);
-            flex-shrink: 0;
-        }
-        .contato-link-info h5 {
-            font-family: var(--mono);
-            font-size: 0.65rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--gray-400);
-            margin-bottom: 3px;
-        }
-        .contato-link-info span {
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        .contato-right {
-            padding-top: 20px;
-        }
-        .contato-email-card {
+        .email-highlight {
             background: var(--gold);
             color: var(--black);
             padding: 48px 40px;
-            border-radius: 2px;
+            border-radius: var(--radius-md);
             position: relative;
             overflow: hidden;
         }
-        .contato-email-card::before {
+        .email-highlight::before {
             content: '';
             position: absolute;
-            top: -60px; right: -60px;
-            width: 200px; height: 200px;
+            top: -40px;
+            right: -40px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            background: rgba(3,3,4,0.08);
+            background: rgba(0,0,0,0.08);
+            pointer-events: none;
         }
-        .contato-email-card::after {
-            content: '';
-            position: absolute;
-            bottom: -80px; left: -40px;
-            width: 240px; height: 240px;
-            border-radius: 50%;
-            background: rgba(3,3,4,0.06);
-        }
-        .email-card-content { position: relative; z-index: 1; }
-        .email-card-label {
-            font-family: var(--mono);
-            font-size: 0.68rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: rgba(3,3,4,0.6);
-            margin-bottom: 16px;
-        }
-        .email-card-title {
-            font-family: var(--display);
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--black);
-            line-height: 1.1;
-            margin-bottom: 16px;
-        }
-        .email-card-sub {
-            font-size: 0.9rem;
-            color: rgba(3,3,4,0.7);
-            line-height: 1.6;
-            margin-bottom: 32px;
-        }
+        .email-highlight .label-mono { color: rgba(0,0,0,0.6); }
+        .email-highlight .heading-md { color: var(--black); }
         .btn-dark {
             background: var(--black);
             color: var(--gold);
+            border: none;
         }
-        .btn-dark::after { background: var(--gray-900); }
-        .btn-dark:hover { color: var(--gold); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
-        .contato-email-addr {
-            margin-top: 20px;
-            font-family: var(--mono);
-            font-size: 0.75rem;
-            color: rgba(3,3,4,0.55);
+        .btn-dark:hover {
+            background: #111;
+            color: var(--gold-pale);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 36px rgba(0,0,0,0.4);
         }
 
         /* ============================================================
            FOOTER
         ============================================================ */
-        footer {
+        .footer {
             background: var(--black);
             border-top: 1px solid rgba(255,255,255,0.06);
             padding: 48px 0;
         }
-        .footer-inner {
+        .footer-grid {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 32px;
             flex-wrap: wrap;
+            gap: 32px;
         }
-        .footer-logo {
-            font-family: var(--display);
-            font-weight: 800;
-            font-size: 1.2rem;
-            letter-spacing: -0.02em;
-        }
-        .footer-logo span { color: var(--gold); }
-        .footer-nav {
+        .footer-links {
             display: flex;
-            gap: 32px;
+            gap: 36px;
             flex-wrap: wrap;
         }
-        .footer-nav a {
-            font-family: var(--mono);
-            font-size: 0.72rem;
+        .footer-links a {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: var(--gray-400);
             transition: color 0.2s;
         }
-        .footer-nav a:hover { color: var(--gold); }
-        .footer-social {
+        .footer-links a:hover { color: var(--gold); }
+        .social-icons {
             display: flex;
-            gap: 16px;
+            gap: 12px;
         }
         .social-icon {
-            width: 40px; height: 40px;
+            width: 40px;
+            height: 40px;
             border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 2px;
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.9rem;
             color: var(--gray-400);
-            transition: all 0.25s;
+            transition: all 0.3s;
         }
         .social-icon:hover {
             border-color: var(--gold);
@@ -1023,311 +965,282 @@
             background: rgba(217,142,4,0.08);
             transform: translateY(-3px);
         }
-        .footer-copy {
+        .copyright {
             width: 100%;
+            text-align: center;
             padding-top: 32px;
             margin-top: 32px;
             border-top: 1px solid rgba(255,255,255,0.05);
-            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            color: var(--gray-500);
         }
-        .footer-copy p {
-            font-family: var(--mono);
-            font-size: 0.68rem;
-            letter-spacing: 0.1em;
-            color: var(--gray-400);
-        }
-        .footer-copy span { color: var(--gold); }
 
         /* ============================================================
-           SCROLL ANIMATIONS
+           ANIMAÇÕES DE ENTRADA (Intersection Observer)
         ============================================================ */
-        [data-reveal] {
+        .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s var(--ease-expo), transform 0.7s var(--ease-expo);
+            transform: translateY(32px);
+            transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
         }
-        [data-reveal].visible {
+        .reveal.visible {
             opacity: 1;
-            transform: none;
+            transform: translateY(0);
         }
-        [data-reveal-delay="1"] { transition-delay: 0.1s; }
-        [data-reveal-delay="2"] { transition-delay: 0.2s; }
-        [data-reveal-delay="3"] { transition-delay: 0.3s; }
-        [data-reveal-delay="4"] { transition-delay: 0.4s; }
-        [data-reveal-delay="5"] { transition-delay: 0.5s; }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
 
         /* ============================================================
-           RESPONSIVE
+           RESPONSIVIDADE — Tudo alinhado em qualquer tela
         ============================================================ */
-        @media (max-width: 900px) {
-            .sobre-grid,
-            .canal-grid,
-            .contato-grid { grid-template-columns: 1fr; gap: 48px; }
-            .sobre-badge { bottom: 16px; right: 16px; }
-            .recursos-preview-grid { grid-template-columns: 1fr; }
-            .nav-menu { display: none; }
-            .nav-hamburger { display: flex; }
-            .hero-stats { position: relative; }
-            .stats-row { flex-wrap: wrap; }
-            .stat-item { flex: none; width: 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 16px; }
-            .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.08); }
+        @media (max-width: 1024px) {
+            .about-grid,
+            .channel-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 56px;
+            }
+            .nav-links { display: none; }
+            .nav-toggle { display: flex; }
+            .hero-stats { flex-wrap: wrap; }
+            .stat-item { flex: 1 1 45%; border-right: none; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+            .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.06); }
         }
-        @media (max-width: 600px) {
-            .projetos-grid { grid-template-columns: 1fr; }
-            .display-xl { font-size: 3rem; }
-            .section { padding: 80px 0; }
-            .projetos-tabs { width: 100%; overflow-x: auto; }
-            .tab-btn { white-space: nowrap; }
-            .recursos-preview-grid { grid-template-columns: 1fr; }
+        @media (max-width: 640px) {
+            :root { --gap-section: 80px; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .hero-title { font-size: 2.8rem; }
+            .btn { padding: 12px 24px; font-size: 0.8rem; }
+            .about-badge { bottom: 12px; right: 12px; padding: 12px 18px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- CUSTOM CURSOR -->
-    <div class="cursor" id="cursorDot" style="position:fixed;top:0;left:0;pointer-events:none;z-index:99999">
-        <div class="cursor-dot"></div>
-    </div>
-    <div class="cursor" id="cursorRing" style="position:fixed;top:0;left:0;pointer-events:none;z-index:99998">
-        <div class="cursor-ring"></div>
-    </div>
+    <!-- Custom cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-    <!-- NAV -->
-    <nav id="nav">
-        <div class="container nav-inner">
+    <!-- Navegação -->
+    <nav id="main-nav">
+        <div class="nav-container">
             <a href="#" class="nav-logo">Gah<span>Souza</span>.dev</a>
-            <ul class="nav-menu">
-                <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li><a href="#canal" class="nav-link">Canal</a></li>
-                <li><a href="#projetos" class="nav-link">Projetos</a></li>
-                <li><a href="#recursos" class="nav-link">Recursos</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
-            </ul>
-            <div class="nav-cta">
-                <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-gold btn-sm">
-                    <i class="fab fa-youtube"></i> Inscreva-se
-                </a>
-                <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-                    <span></span><span></span><span></span>
-                </button>
+            <div class="nav-links">
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#canal" class="nav-link">Canal</a>
+                <a href="#projetos" class="nav-link">Projetos</a>
+                <a href="#recursos" class="nav-link">Recursos</a>
+                <a href="#contato" class="nav-link">Contato</a>
             </div>
+            <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-primary btn-sm nav-cta">
+                <i class="fab fa-youtube"></i> Inscrever
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- MOBILE NAV -->
-    <div class="nav-mobile" id="mobileNav">
-        <a href="#sobre" class="nav-link mobile-close">Sobre</a>
-        <a href="#canal" class="nav-link mobile-close">Canal</a>
-        <a href="#projetos" class="nav-link mobile-close">Projetos</a>
-        <a href="#recursos" class="nav-link mobile-close">Recursos</a>
-        <a href="#contato" class="nav-link mobile-close">Contato</a>
-        <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-gold" style="margin-top:8px">
-            <i class="fab fa-youtube"></i> Inscreva-se
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#canal" class="nav-link">Canal</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#recursos" class="nav-link">Recursos</a>
+        <a href="#contato" class="nav-link">Contato</a>
+        <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-primary" style="margin-top:20px">
+            <i class="fab fa-youtube"></i> Inscrever-se
         </a>
     </div>
 
-    <!-- HERO -->
+    <!-- Hero -->
     <section id="hero">
-        <div class="hero-grid-bg"></div>
-        <div class="hero-glow"></div>
-        <div class="hero-glow-2"></div>
-        <div class="container hero-content">
-            <div class="hero-overline" data-reveal>
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow-primary"></div>
+        <div class="hero-glow-secondary"></div>
+        <div class="hero-content">
+            <div class="hero-overline reveal">
                 <div class="hero-overline-line"></div>
-                <span class="label">Full Stack Dev · Robótica · IA</span>
+                <span class="label-mono" style="margin-bottom:0">Full Stack · Robótica · IA</span>
             </div>
-            <h1 class="display-xl hero-name" data-reveal data-reveal-delay="1">
+            <h1 class="heading-xl hero-title reveal delay-1">
                 Construindo<br>o <em>futuro</em><br>linha a linha.
             </h1>
-            <p class="hero-sub" data-reveal data-reveal-delay="2">
-                Desenvolvedor Full Stack, criador de robótica educacional e automação com ESP32. Mini-documentários no YouTube, código open-source e projetos que existem no mundo real.
+            <p class="hero-subtitle reveal delay-2">
+                Desenvolvedor Full Stack, criador de robótica educacional e automação com ESP32. Mini-documentários no YouTube, código open-source e projetos que saem da tela e ganham o mundo físico.
             </p>
-            <div class="hero-actions" data-reveal data-reveal-delay="3">
-                <a href="#projetos" class="btn btn-gold">
+            <div class="hero-actions reveal delay-3">
+                <a href="#projetos" class="btn btn-primary">
                     Ver Projetos <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-outline">
-                    <i class="fab fa-youtube"></i> Ver Canal
+                    <i class="fab fa-youtube"></i> YouTube
                 </a>
             </div>
+            <div class="hero-stats reveal delay-4">
+                <div class="stat-item">
+                    <div class="stat-num">4+</div>
+                    <div class="stat-label">Anos de código</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">10+</div>
+                    <div class="stat-label">Projetos entregues</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">ESP32</div>
+                    <div class="stat-label">Hardware favorito</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">∞</div>
+                    <div class="stat-label">Curiosidade</div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line-animated"></div>
+            </div>
         </div>
-        <div class="hero-scroll-hint" id="scrollHint">
-            <span>scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-        <div class="hero-stats">
-            <div class="container">
-                <div class="stats-row">
-                    <div class="stat-item">
-                        <div class="stat-num">4+</div>
-                        <div class="stat-label">Anos de código</div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section section-dark">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal">
+                    <img src="profile.png" alt="Emerson Gabriel — Gah Souza Dev" class="about-image">
+                    <div class="about-badge">
+                        <div class="about-badge-number">FS</div>
+                        <div class="about-badge-text">Full Stack<br>& Embedded</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-num">10+</div>
-                        <div class="stat-label">Projetos entregues</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-num">ESP32</div>
-                        <div class="stat-label">Hardware favorito</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-num">∞</div>
-                        <div class="stat-label">Curiosidade</div>
+                </div>
+                <div class="about-text reveal delay-2">
+                    <span class="label-mono">Quem sou eu</span>
+                    <div class="divider-gold"></div>
+                    <h2 class="heading-lg" style="margin-bottom:24px">Emerson Gabriel<br><span style="color:var(--gold)">Gah Souza Dev</span></h2>
+                    <p>
+                        Sou um <strong>desenvolvedor Full Stack</strong> com anos de experiência real — não apenas teoria. Atuo com front-end, back-end, sistemas embarcados, robótica educacional e inteligência artificial aplicada.
+                    </p>
+                    <p>
+                        Meus projetos saem do código e ganham o <strong>mundo físico</strong>: rovers com ESP32-CAM e visão computacional, braços robóticos, sistemas de automação — tudo construído do zero, com as próprias mãos.
+                    </p>
+                    <p>
+                        Documento tudo no YouTube como <strong>mini-documentários</strong> para quem aprende construindo coisas reais, não apenas copiando tutoriais.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">C++ / Arduino</span>
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">TensorFlow Lite</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">UI/UX</span>
+                        <span class="tech-tag">ROS</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="section">
+    <!-- Canal -->
+    <section id="canal" class="section section-black">
         <div class="container">
-            <div class="sobre-grid">
-                <div class="sobre-visual" data-reveal>
-                    <div class="sobre-img-wrap">
-                        <img src="profile.png" alt="Emerson Gabriel — Gah Souza Dev" class="sobre-img">
-                    </div>
-                    <div class="sobre-badge">
-                        <div class="sobre-badge-num">FS</div>
-                        <div class="sobre-badge-text">Full Stack &<br>Embedded Dev</div>
-                    </div>
-                </div>
-                <div class="sobre-text" data-reveal data-reveal-delay="2">
-                    <span class="label">Quem sou eu</span>
-                    <div class="divider"></div>
-                    <h2 class="section-title" style="margin-bottom:32px">Emerson Gabriel<br><span style="color:var(--gold)">Gah Souza Dev</span></h2>
+            <div class="channel-grid">
+                <div class="channel-text reveal">
+                    <span class="label-mono">YouTube</span>
+                    <div class="divider-gold"></div>
+                    <h2 class="heading-lg">Mini-docs de<br><span style="color:var(--gold)">projetos reais</span></h2>
                     <p>
-                        Sou um <strong>desenvolvedor Full Stack</strong> com anos de experiência real — não só teoria. Trabalho com front-end, back-end, sistemas embarcados, robótica educacional e inteligência artificial aplicada.
+                        No canal, o foco é a construção de ponta a ponta: conceito, erros, código, hardware e resultado final. Nada de tutoriais genéricos — aqui é engenharia na prática.
                     </p>
-                    <p>
-                        Meus projetos saem do código e vão para o <strong>mundo físico</strong>: rovers com ESP32-CAM e visão computacional, braços robóticos, sistemas de automação — tudo construído do zero.
-                    </p>
-                    <p>
-                        Além disso, documento tudo no meu canal do YouTube em formato de <strong>mini-documentários</strong> para quem quer aprender construindo coisas reais, não só seguindo tutoriais.
-                    </p>
-                    <div class="sobre-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">C++ / Arduino</span>
-                        <span class="tag">ESP32</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">TensorFlow Lite</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">ROS (aprendendo)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CANAL YOUTUBE -->
-    <section id="canal" class="section">
-        <div class="canal-bg-text">DOCS</div>
-        <div class="container">
-            <div class="canal-grid">
-                <div class="canal-text" data-reveal>
-                    <span class="label">YouTube</span>
-                    <div class="divider"></div>
-                    <h2 class="section-title">Mini-docs de<br><span style="color:var(--gold)">projetos reais</span></h2>
-                    <p>
-                        No canal, não faço tutoriais genéricos — faço mini-documentários de projetos reais. Mostro o processo completo: a ideia, os erros, o código, o hardware e o resultado final.
-                    </p>
-                    <div class="canal-features">
-                        <div class="canal-feature">
-                            <div class="canal-feature-icon"><i class="fas fa-robot"></i></div>
-                            <div class="canal-feature-text">
-                                <h4>Robótica Educacional</h4>
-                                <p>Rovers com ESP32-CAM, braços robóticos, controle remoto e muito mais.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                            <div>
+                                <div class="feature-title">Robótica Educacional</div>
+                                <div class="feature-desc">Rovers com ESP32-CAM, braços robóticos, controle remoto e visão computacional.</div>
                             </div>
                         </div>
-                        <div class="canal-feature">
-                            <div class="canal-feature-icon"><i class="fas fa-brain"></i></div>
-                            <div class="canal-feature-text">
-                                <h4>IA Embarcada</h4>
-                                <p>Visão computacional com OpenCV, modelos rodando em microcontroladores.</p>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                            <div>
+                                <div class="feature-title">IA Embarcada</div>
+                                <div class="feature-desc">OpenCV, TensorFlow Lite e modelos rodando diretamente em microcontroladores.</div>
                             </div>
                         </div>
-                        <div class="canal-feature">
-                            <div class="canal-feature-icon"><i class="fas fa-microchip"></i></div>
-                            <div class="canal-feature-text">
-                                <h4>Automação & ESP32</h4>
-                                <p>Sistemas IoT, automação residencial, sensores e atuadores inteligentes.</p>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+                            <div>
+                                <div class="feature-title">Automação & ESP32</div>
+                                <div class="feature-desc">Sistemas IoT, automação residencial, sensores e atuadores inteligentes.</div>
                             </div>
                         </div>
                     </div>
-                    <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-gold">
+                    <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-primary">
                         <i class="fab fa-youtube"></i> Visitar Canal
                     </a>
                 </div>
-                <div class="canal-visual" data-reveal data-reveal-delay="2">
-                    <div class="canal-embed-wrap">
-                        <a href="https://www.youtube.com/@GahSouzaDev" target="_blank">
-                            <div class="canal-embed-placeholder">
-                                <div class="canal-play-btn">
-                                    <i class="fas fa-play" style="margin-left:4px"></i>
-                                </div>
-                                <div style="text-align:center">
-                                    <div style="font-family:var(--display);font-weight:700;font-size:1.1rem;margin-bottom:6px">@GahSouzaDev</div>
-                                    <div style="font-family:var(--mono);font-size:0.72rem;color:var(--gray-400);letter-spacing:0.1em">YOUTUBE</div>
-                                </div>
+                <div class="channel-preview reveal delay-2">
+                    <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" aria-label="Visitar canal no YouTube">
+                        <div class="video-placeholder">
+                            <div class="play-circle">
+                                <i class="fas fa-play" style="margin-left:4px"></i>
                             </div>
-                        </a>
-                        <div class="canal-sub-strip">
-                            <div class="canal-sub-info">
-                                <i class="fab fa-youtube yt-icon"></i>
-                                <div class="canal-sub-text">
-                                    <strong>GahSouzaDev</strong> · Canal de tecnologia e robótica
-                                </div>
+                            <div style="text-align:center">
+                                <div style="font-family:var(--font-display);font-weight:700;font-size:1.1rem">@GahSouzaDev</div>
+                                <div class="label-mono" style="margin-bottom:0;color:var(--gray-400)">YOUTUBE</div>
                             </div>
-                            <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-gold btn-sm">
-                                Inscrever-se
-                            </a>
                         </div>
+                    </a>
+                    <div class="channel-bar">
+                        <span><i class="fab fa-youtube" style="color:#FF0000;margin-right:8px"></i> GahSouzaDev</span>
+                        <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-primary btn-sm">Inscrever</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="section">
+    <!-- Projetos -->
+    <section id="projetos" class="section section-dark">
         <div class="container">
-            <div class="section-header" data-reveal>
-                <span class="label">Portfólio</span>
-                <div class="divider"></div>
-                <h2 class="section-title">Projetos que <span style="color:var(--gold)">existem</span></h2>
+            <div class="section-header reveal">
+                <span class="label-mono">Portfólio</span>
+                <div class="divider-gold"></div>
+                <h2 class="heading-lg">Projetos que <span style="color:var(--gold)">existem</span></h2>
             </div>
 
-            <div class="projetos-tabs" data-reveal data-reveal-delay="1">
-                <button class="tab-btn active" data-tab="todos">Todos</button>
-                <button class="tab-btn" data-tab="robotica">Robótica</button>
-                <button class="tab-btn" data-tab="web">Web</button>
-                <button class="tab-btn" data-tab="app">Apps</button>
-                <button class="tab-btn" data-tab="game">Games</button>
+            <div class="filter-bar reveal delay-1">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">Apps</button>
+                <button class="filter-btn" data-filter="game">Games</button>
+                <button class="filter-btn" data-filter="robotica">Robótica</button>
             </div>
 
-            <div class="projetos-grid" id="projetosGrid">
-
+            <div class="projects-grid" id="projectsGrid">
                 <!-- AxMirrors -->
-                <article class="projeto-card" data-cat="web" data-reveal data-reveal-delay="1">
-                    <div class="projeto-img-wrap">
-                        <img src="axmirrors.png" alt="AxMirrors" class="projeto-img" onerror="this.parentElement.innerHTML='<div class=\'projeto-img-placeholder\'><i class=\'fas fa-store\'></i></div>'">
-                        <span class="projeto-cat-badge">E-commerce</span>
+                <article class="project-card reveal delay-1" data-category="web">
+                    <div class="card-image-wrap">
+                        <img src="axmirrors.png" alt="AxMirrors" class="card-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;color:#333\'><i class=\'fas fa-store\'></i></div>'">
+                        <span class="card-category-badge">E-commerce</span>
                     </div>
-                    <div class="projeto-body">
-                        <h3 class="projeto-title">AxMirrors</h3>
-                        <p class="projeto-desc">Loja online completa com design personalizado, sistema de produtos e experiência de compra otimizada.</p>
-                        <div class="projeto-tech">
-                            <span class="tech-chip">HTML/CSS</span>
-                            <span class="tech-chip">JavaScript</span>
-                            <span class="tech-chip">E-commerce</span>
+                    <div class="card-body">
+                        <h3 class="card-title">AxMirrors</h3>
+                        <p class="card-description">Loja online completa com design personalizado, sistema de produtos e experiência de compra otimizada.</p>
+                        <div class="tech-chips">
+                            <span class="chip">HTML/CSS</span><span class="chip">JavaScript</span><span class="chip">E-commerce</span>
                         </div>
-                        <div class="projeto-footer">
-                            <a href="https://axmirrors.com.br/" target="_blank" class="projeto-link">
+                        <div class="card-footer">
+                            <a href="https://axmirrors.com.br/" target="_blank" class="project-link">
                                 Ver ao vivo <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -1335,21 +1248,19 @@
                 </article>
 
                 <!-- Umbra -->
-                <article class="projeto-card" data-cat="game" data-reveal data-reveal-delay="2">
-                    <div class="projeto-img-wrap">
-                        <img src="umbra.png" alt="Umbra" class="projeto-img" onerror="this.parentElement.innerHTML='<div class=\'projeto-img-placeholder\'><i class=\'fas fa-gamepad\'></i></div>'">
-                        <span class="projeto-cat-badge">Game</span>
+                <article class="project-card reveal delay-2" data-category="game">
+                    <div class="card-image-wrap">
+                        <img src="umbra.png" alt="Umbra" class="card-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;color:#333\'><i class=\'fas fa-gamepad\'></i></div>'">
+                        <span class="card-category-badge">Game</span>
                     </div>
-                    <div class="projeto-body">
-                        <h3 class="projeto-title">Umbra: Guerra dos Espíritos</h3>
-                        <p class="projeto-desc">Jogo de navegador desenvolvido em JavaScript puro — mecânicas únicas, arte própria e narrativa original.</p>
-                        <div class="projeto-tech">
-                            <span class="tech-chip">JavaScript</span>
-                            <span class="tech-chip">Canvas API</span>
-                            <span class="tech-chip">Game Dev</span>
+                    <div class="card-body">
+                        <h3 class="card-title">Umbra: Guerra dos Espíritos</h3>
+                        <p class="card-description">Jogo de navegador em JavaScript puro — mecânicas próprias, arte original e narrativa envolvente.</p>
+                        <div class="tech-chips">
+                            <span class="chip">JavaScript</span><span class="chip">Canvas API</span><span class="chip">Game Dev</span>
                         </div>
-                        <div class="projeto-footer">
-                            <a href="https://gahsouzadev.github.io/UMBRA/" target="_blank" class="projeto-link">
+                        <div class="card-footer">
+                            <a href="https://gahsouzadev.github.io/UMBRA/" target="_blank" class="project-link">
                                 Jogar <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -1357,21 +1268,19 @@
                 </article>
 
                 <!-- OrganizeDay -->
-                <article class="projeto-card" data-cat="app" data-reveal data-reveal-delay="3">
-                    <div class="projeto-img-wrap">
-                        <img src="organizeday.png" alt="OrganizeDay" class="projeto-img" onerror="this.parentElement.innerHTML='<div class=\'projeto-img-placeholder\'><i class=\'fas fa-calendar-check\'></i></div>'">
-                        <span class="projeto-cat-badge">Produtividade</span>
+                <article class="project-card reveal delay-3" data-category="app">
+                    <div class="card-image-wrap">
+                        <img src="organizeday.png" alt="OrganizeDay" class="card-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;color:#333\'><i class=\'fas fa-calendar-check\'></i></div>'">
+                        <span class="card-category-badge">Produtividade</span>
                     </div>
-                    <div class="projeto-body">
-                        <h3 class="projeto-title">OrganizeDay</h3>
-                        <p class="projeto-desc">Web app de produtividade com sistema de tarefas, rotinas e organização de tempo inteligente.</p>
-                        <div class="projeto-tech">
-                            <span class="tech-chip">React</span>
-                            <span class="tech-chip">JavaScript</span>
-                            <span class="tech-chip">PWA</span>
+                    <div class="card-body">
+                        <h3 class="card-title">OrganizeDay</h3>
+                        <p class="card-description">Aplicativo web progressivo (PWA) para gerenciamento de tarefas, rotinas e organização do tempo.</p>
+                        <div class="tech-chips">
+                            <span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">PWA</span>
                         </div>
-                        <div class="projeto-footer">
-                            <a href="https://gahsouzadev.github.io/OrganizeDay/" target="_blank" class="projeto-link">
+                        <div class="card-footer">
+                            <a href="https://gahsouzadev.github.io/OrganizeDay/" target="_blank" class="project-link">
                                 Abrir app <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -1379,194 +1288,183 @@
                 </article>
 
                 <!-- Asthor Barden -->
-                <article class="projeto-card" data-cat="web" data-reveal data-reveal-delay="4">
-                    <div class="projeto-img-wrap">
-                        <img src="asthor.png" alt="Asthor Barden" class="projeto-img" onerror="this.parentElement.innerHTML='<div class=\'projeto-img-placeholder\'><i class=\'fas fa-graduation-cap\'></i></div>'">
-                        <span class="projeto-cat-badge">Educação</span>
+                <article class="project-card reveal delay-4" data-category="web">
+                    <div class="card-image-wrap">
+                        <img src="asthor.png" alt="Asthor Barden" class="card-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;color:#333\'><i class=\'fas fa-graduation-cap\'></i></div>'">
+                        <span class="card-category-badge">Educação</span>
                     </div>
-                    <div class="projeto-body">
-                        <h3 class="projeto-title">Asthor Barden Jogos</h3>
-                        <p class="projeto-desc">Plataforma educacional gamificada — jogos pedagógicos para estimular o aprendizado de forma divertida.</p>
-                        <div class="projeto-tech">
-                            <span class="tech-chip">JavaScript</span>
-                            <span class="tech-chip">HTML/CSS</span>
-                            <span class="tech-chip">Ed-Tech</span>
+                    <div class="card-body">
+                        <h3 class="card-title">Asthor Barden Jogos</h3>
+                        <p class="card-description">Plataforma educacional gamificada com jogos pedagógicos para estimular o aprendizado.</p>
+                        <div class="tech-chips">
+                            <span class="chip">JavaScript</span><span class="chip">HTML/CSS</span><span class="chip">Ed-Tech</span>
                         </div>
-                        <div class="projeto-footer">
-                            <a href="https://asthor-barden.github.io/AsthorBardenJogos/" target="_blank" class="projeto-link">
+                        <div class="card-footer">
+                            <a href="https://asthor-barden.github.io/AsthorBardenJogos/" target="_blank" class="project-link">
                                 Ver projeto <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Rover ESP32 (em desenvolvimento) -->
-                <article class="projeto-card" data-cat="robotica" data-reveal data-reveal-delay="5">
-                    <div class="projeto-img-wrap">
-                        <div class="projeto-img-placeholder">
+                <!-- Rover ESP32 -->
+                <article class="project-card reveal delay-5" data-category="robotica">
+                    <div class="card-image-wrap">
+                        <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;color:#333;background:var(--gray-700)">
                             <i class="fas fa-satellite-dish"></i>
                         </div>
-                        <span class="projeto-cat-badge" style="background:rgba(217,142,4,0.2);border-color:var(--gold)">Em desenvolvimento</span>
+                        <span class="card-category-badge" style="background:rgba(217,142,4,0.3);">Em breve</span>
                     </div>
-                    <div class="projeto-body">
-                        <h3 class="projeto-title">Rover ESP32-CAM</h3>
-                        <p class="projeto-desc">Rover autônomo com câmera, visão computacional em tempo real, controle via Wi-Fi e detecção de obstáculos com IA embarcada.</p>
-                        <div class="projeto-tech">
-                            <span class="tech-chip">ESP32-CAM</span>
-                            <span class="tech-chip">OpenCV</span>
-                            <span class="tech-chip">C++</span>
-                            <span class="tech-chip">Python</span>
+                    <div class="card-body">
+                        <h3 class="card-title">Rover ESP32-CAM</h3>
+                        <p class="card-description">Rover autônomo com câmera, visão computacional em tempo real e detecção de obstáculos com IA embarcada.</p>
+                        <div class="tech-chips">
+                            <span class="chip">ESP32-CAM</span><span class="chip">OpenCV</span><span class="chip">C++</span><span class="chip">Python</span>
                         </div>
-                        <div class="projeto-footer">
-                            <span style="font-family:var(--mono);font-size:0.72rem;color:var(--gold);letter-spacing:0.1em">
-                                <i class="fas fa-clock" style="margin-right:6px"></i>Em breve no canal
+                        <div class="card-footer">
+                            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gold);">
+                                <i class="fas fa-clock"></i> Em breve no canal
                             </span>
                         </div>
                     </div>
                 </article>
 
-                <!-- Braço Robótico (em desenvolvimento) -->
-                <article class="projeto-card" data-cat="robotica" data-reveal data-reveal-delay="5">
-                    <div class="projeto-img-wrap">
-                        <div class="projeto-img-placeholder">
+                <!-- Braço Robótico -->
+                <article class="project-card reveal delay-5" data-category="robotica">
+                    <div class="card-image-wrap">
+                        <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;color:#333;background:var(--gray-700)">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <span class="projeto-cat-badge" style="background:rgba(217,142,4,0.2);border-color:var(--gold)">Em desenvolvimento</span>
+                        <span class="card-category-badge" style="background:rgba(217,142,4,0.3);">Em breve</span>
                     </div>
-                    <div class="projeto-body">
-                        <h3 class="projeto-title">Braço Robótico Educacional</h3>
-                        <p class="projeto-desc">Braço robótico de 4 eixos controlado por ESP32, com interface web para programação e movimentação precisa com servos.</p>
-                        <div class="projeto-tech">
-                            <span class="tech-chip">ESP32</span>
-                            <span class="tech-chip">Servos</span>
-                            <span class="tech-chip">WebSocket</span>
-                            <span class="tech-chip">C++</span>
+                    <div class="card-body">
+                        <h3 class="card-title">Braço Robótico Educacional</h3>
+                        <p class="card-description">Braço de 4 eixos com ESP32, interface web para programação e controle preciso de servos.</p>
+                        <div class="tech-chips">
+                            <span class="chip">ESP32</span><span class="chip">Servos</span><span class="chip">WebSocket</span>
                         </div>
-                        <div class="projeto-footer">
-                            <span style="font-family:var(--mono);font-size:0.72rem;color:var(--gold);letter-spacing:0.1em">
-                                <i class="fas fa-clock" style="margin-right:6px"></i>Em breve no canal
+                        <div class="card-footer">
+                            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gold);">
+                                <i class="fas fa-clock"></i> Em breve
                             </span>
                         </div>
                     </div>
                 </article>
-
             </div>
         </div>
     </section>
 
-    <!-- RECURSOS -->
-    <section id="recursos" class="section">
+    <!-- Recursos -->
+    <section id="recursos" class="section section-black">
         <div class="container">
-            <div class="section-header" data-reveal>
-                <span class="label">Downloads & Tutoriais</span>
-                <div class="divider"></div>
-                <h2 class="section-title">Recursos para <span style="color:var(--gold)">builders</span></h2>
+            <div class="section-header reveal">
+                <span class="label-mono">Downloads & Tutoriais</span>
+                <div class="divider-gold"></div>
+                <h2 class="heading-lg">Recursos para <span style="color:var(--gold)">builders</span></h2>
             </div>
-
-            <div class="recursos-coming-soon" data-reveal>
-                <div class="coming-icon"><i class="fas fa-box-open"></i></div>
-                <h3 class="coming-title">Conteúdo chegando em breve</h3>
-                <p class="coming-sub">
-                    Estou preparando códigos, esquemas de circuito, arquivos 3D e guias completos dos projetos documentados no canal. Tudo organizado por projeto, gratuito para a comunidade.
+            <div class="resources-coming reveal">
+                <i class="fas fa-box-open" style="font-size:2.5rem;color:var(--gold);margin-bottom:20px;display:block"></i>
+                <h3 style="font-family:var(--font-display);font-size:1.8rem;margin-bottom:16px">Conteúdo chegando em breve</h3>
+                <p style="color:var(--gray-400);max-width:500px;margin:0 auto 28px">
+                    Códigos, esquemas de circuito, arquivos 3D e guias completos dos projetos documentados no canal. Tudo open-source e organizado por projeto.
                 </p>
-                <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-gold">
-                    <i class="fab fa-youtube"></i> Acompanhe o canal para não perder
+                <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-youtube"></i> Acompanhe no canal
                 </a>
             </div>
-
-            <div class="recursos-preview-grid" data-reveal data-reveal-delay="2">
-                <div class="recurso-preview">
-                    <div class="recurso-preview-icon"><i class="fas fa-code"></i></div>
-                    <h4>Código-fonte</h4>
-                    <p>Repositórios completos dos projetos — firmware ESP32, scripts Python, front-ends e muito mais.</p>
+            <div class="resources-grid reveal delay-2">
+                <div class="resource-card">
+                    <div class="resource-icon"><i class="fas fa-code"></i></div>
+                    <h4 class="feature-title" style="margin-bottom:8px">Código-fonte</h4>
+                    <p class="feature-desc">Repositórios completos — firmware ESP32, scripts Python, front-ends e mais.</p>
                 </div>
-                <div class="recurso-preview">
-                    <div class="recurso-preview-icon"><i class="fas fa-microchip"></i></div>
-                    <h4>Esquemas de Circuito</h4>
-                    <p>Diagramas elétricos, lista de componentes e guias de montagem para replicar os projetos.</p>
+                <div class="resource-card">
+                    <div class="resource-icon"><i class="fas fa-microchip"></i></div>
+                    <h4 class="feature-title" style="margin-bottom:8px">Esquemas de Circuito</h4>
+                    <p class="feature-desc">Diagramas elétricos e lista de componentes para replicar cada projeto.</p>
                 </div>
-                <div class="recurso-preview">
-                    <div class="recurso-preview-icon"><i class="fas fa-cube"></i></div>
-                    <h4>Arquivos 3D & CAD</h4>
-                    <p>Modelos para impressão 3D das peças mecânicas utilizadas nos robôs e projetos de automação.</p>
+                <div class="resource-card">
+                    <div class="resource-icon"><i class="fas fa-cube"></i></div>
+                    <h4 class="feature-title" style="margin-bottom:8px">Arquivos 3D & CAD</h4>
+                    <p class="feature-desc">Modelos para impressão 3D das peças mecânicas utilizadas nos robôs.</p>
                 </div>
-                <div class="recurso-preview">
-                    <div class="recurso-preview-icon"><i class="fas fa-book-open"></i></div>
-                    <h4>Guias & Documentação</h4>
-                    <p>Passo a passo detalhado de como cada projeto foi construído, do conceito ao resultado final.</p>
+                <div class="resource-card">
+                    <div class="resource-icon"><i class="fas fa-book-open"></i></div>
+                    <h4 class="feature-title" style="margin-bottom:8px">Guias & Documentação</h4>
+                    <p class="feature-desc">Passo a passo detalhado da construção de cada projeto.</p>
                 </div>
-                <div class="recurso-preview">
-                    <div class="recurso-preview-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h4>Cursos (em breve)</h4>
-                    <p>Conteúdo aprofundado sobre robótica, ESP32 e IA embarcada — aprenda construindo coisas reais.</p>
+                <div class="resource-card">
+                    <div class="resource-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h4 class="feature-title" style="margin-bottom:8px">Cursos (em breve)</h4>
+                    <p class="feature-desc">Conteúdo aprofundado sobre robótica, ESP32 e IA embarcada.</p>
                 </div>
-                <div class="recurso-preview">
-                    <div class="recurso-preview-icon"><i class="fas fa-users"></i></div>
-                    <h4>Comunidade</h4>
-                    <p>Grupo exclusivo para troca de projetos, dúvidas e colaboração entre makers e desenvolvedores.</p>
+                <div class="resource-card">
+                    <div class="resource-icon"><i class="fas fa-users"></i></div>
+                    <h4 class="feature-title" style="margin-bottom:8px">Comunidade</h4>
+                    <p class="feature-desc">Espaço para troca de projetos, dúvidas e colaboração entre makers.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="section">
+    <!-- Contato -->
+    <section id="contato" class="section section-dark">
         <div class="container">
-            <div class="contato-grid">
-                <div class="contato-text" data-reveal>
-                    <span class="label">Fale comigo</span>
-                    <div class="divider"></div>
-                    <h2 class="section-title">Vamos construir<br><span style="color:var(--gold)">algo juntos?</span></h2>
-                    <p>
-                        Aberto a projetos, colaborações, parcerias e conversas interessantes. Se você tem uma ideia, um problema pra resolver ou quer discutir tecnologia, manda um email.
+            <div class="contact-grid">
+                <div class="reveal">
+                    <span class="label-mono">Fale comigo</span>
+                    <div class="divider-gold"></div>
+                    <h2 class="heading-lg">Vamos construir<br><span style="color:var(--gold)">algo juntos?</span></h2>
+                    <p style="color:var(--gray-200);margin:24px 0 40px;line-height:1.8">
+                        Aberto a projetos, colaborações e parcerias. Se tem uma ideia ou desafio tecnológico, vamos conversar.
                     </p>
-                    <div class="contato-links">
-                        <a href="https://github.com/GahSouzaDev" target="_blank" class="contato-link-item">
-                            <div class="contato-link-icon"><i class="fab fa-github"></i></div>
-                            <div class="contato-link-info">
-                                <h5>GitHub</h5>
-                                <span>GahSouzaDev</span>
+                    <div class="contact-links-list">
+                        <a href="https://github.com/GahSouzaDev" target="_blank" class="contact-link-card">
+                            <i class="fab fa-github" style="color:var(--gold);font-size:1.2rem;width:28px"></i>
+                            <div>
+                                <div class="label-mono" style="margin-bottom:2px;font-size:0.6rem">GitHub</div>
+                                <span style="font-weight:500">GahSouzaDev</span>
                             </div>
-                            <i class="fas fa-arrow-right" style="margin-left:auto;color:var(--gray-400);font-size:0.8rem"></i>
+                            <i class="fas fa-arrow-right" style="margin-left:auto;color:var(--gray-500)"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/emerson-gabriel-souza-558841324/" target="_blank" class="contato-link-item">
-                            <div class="contato-link-icon"><i class="fab fa-linkedin"></i></div>
-                            <div class="contato-link-info">
-                                <h5>LinkedIn</h5>
-                                <span>Emerson Gabriel Souza</span>
+                        <a href="https://www.linkedin.com/in/emerson-gabriel-souza-558841324/" target="_blank" class="contact-link-card">
+                            <i class="fab fa-linkedin" style="color:var(--gold);font-size:1.2rem;width:28px"></i>
+                            <div>
+                                <div class="label-mono" style="margin-bottom:2px;font-size:0.6rem">LinkedIn</div>
+                                <span style="font-weight:500">Emerson Gabriel Souza</span>
                             </div>
-                            <i class="fas fa-arrow-right" style="margin-left:auto;color:var(--gray-400);font-size:0.8rem"></i>
+                            <i class="fas fa-arrow-right" style="margin-left:auto;color:var(--gray-500)"></i>
                         </a>
-                        <a href="https://www.instagram.com/gahsouzadev/" target="_blank" class="contato-link-item">
-                            <div class="contato-link-icon"><i class="fab fa-instagram"></i></div>
-                            <div class="contato-link-info">
-                                <h5>Instagram</h5>
-                                <span>@gahsouzadev</span>
+                        <a href="https://www.instagram.com/gahsouzadev/" target="_blank" class="contact-link-card">
+                            <i class="fab fa-instagram" style="color:var(--gold);font-size:1.2rem;width:28px"></i>
+                            <div>
+                                <div class="label-mono" style="margin-bottom:2px;font-size:0.6rem">Instagram</div>
+                                <span style="font-weight:500">@gahsouzadev</span>
                             </div>
-                            <i class="fas fa-arrow-right" style="margin-left:auto;color:var(--gray-400);font-size:0.8rem"></i>
+                            <i class="fas fa-arrow-right" style="margin-left:auto;color:var(--gray-500)"></i>
                         </a>
-                        <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="contato-link-item">
-                            <div class="contato-link-icon" style="background:rgba(255,0,0,0.1);color:#FF0000"><i class="fab fa-youtube"></i></div>
-                            <div class="contato-link-info">
-                                <h5>YouTube</h5>
-                                <span>@GahSouzaDev</span>
+                        <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="contact-link-card">
+                            <i class="fab fa-youtube" style="color:#FF0000;font-size:1.2rem;width:28px"></i>
+                            <div>
+                                <div class="label-mono" style="margin-bottom:2px;font-size:0.6rem">YouTube</div>
+                                <span style="font-weight:500">@GahSouzaDev</span>
                             </div>
-                            <i class="fas fa-arrow-right" style="margin-left:auto;color:var(--gray-400);font-size:0.8rem"></i>
+                            <i class="fas fa-arrow-right" style="margin-left:auto;color:var(--gray-500)"></i>
                         </a>
                     </div>
                 </div>
-                <div class="contato-right" data-reveal data-reveal-delay="2">
-                    <div class="contato-email-card">
-                        <div class="email-card-content">
-                            <div class="email-card-label">Email direto</div>
-                            <h3 class="email-card-title">Prefere mandar<br>um email?</h3>
-                            <p class="email-card-sub">
-                                Sem formulários, sem complicação. Clica no botão e seu cliente de email já abre com o meu endereço preenchido.
-                            </p>
-                            <a href="mailto:gahsouzadev@gmail.com?subject=Olá, Gah!" class="btn btn-dark">
-                                <i class="fas fa-envelope"></i> Enviar Email
-                            </a>
-                            <div class="contato-email-addr">gahsouzadev@gmail.com</div>
+                <div class="reveal delay-2">
+                    <div class="email-highlight">
+                        <span class="label-mono">Email direto</span>
+                        <h3 class="heading-md" style="margin:16px 0">Sem formulários,<br>direto ao ponto.</h3>
+                        <p style="color:rgba(0,0,0,0.65);margin-bottom:32px;line-height:1.6">
+                            Clique no botão e seu cliente de email abre com meu endereço. Simples assim.
+                        </p>
+                        <a href="mailto:gahsouzadev@gmail.com?subject=Olá%20Gah!" class="btn btn-dark">
+                            <i class="fas fa-envelope"></i> Enviar Email
+                        </a>
+                        <div style="margin-top:24px;font-family:var(--font-mono);font-size:0.7rem;color:rgba(0,0,0,0.5)">
+                            gahsouzadev@gmail.com
                         </div>
                     </div>
                 </div>
@@ -1574,130 +1472,141 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <div class="footer-inner">
-                <div class="footer-logo">Gah<span>Souza</span>.dev</div>
-                <nav class="footer-nav">
+            <div class="footer-grid">
+                <a href="#" class="nav-logo">Gah<span>Souza</span>.dev</a>
+                <div class="footer-links">
                     <a href="#sobre">Sobre</a>
                     <a href="#canal">Canal</a>
                     <a href="#projetos">Projetos</a>
                     <a href="#recursos">Recursos</a>
                     <a href="#contato">Contato</a>
-                </nav>
-                <div class="footer-social">
-                    <a href="https://github.com/GahSouzaDev" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/emerson-gabriel-souza-558841324/" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/gahsouzadev/" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
-                <div class="footer-copy">
-                    <p>© 2025 Emerson Gabriel Souza — Gah<span>Souza</span>.dev · Feito com código e <span>∞</span> café.</p>
+                <div class="social-icons">
+                    <a href="https://github.com/GahSouzaDev" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/emerson-gabriel-souza-558841324/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/gahsouzadev/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="copyright">
+                    © 2025 Emerson Gabriel Souza — Gah<span style="color:var(--gold)">Souza</span>.dev · Feito com código, hardware e <span style="color:var(--gold)">∞</span> café.
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
     <script>
-        // ============================================================
-        // CURSOR
-        // ============================================================
-        const dot = document.getElementById('cursorDot');
-        const ring = document.getElementById('cursorRing');
-        let mx = -100, my = -100, rx = -100, ry = -100;
+        (function() {
+            // ============================================================
+            // CURSOR CUSTOMIZADO
+            // ============================================================
+            const dot = document.getElementById('cursorDot');
+            const ring = document.getElementById('cursorRing');
+            let mouseX = -100, mouseY = -100;
+            let ringX = -100, ringY = -100;
 
-        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-        const interactables = 'a, button, .tag, .projeto-card, .contato-link-item, .canal-feature, .recurso-preview';
-        document.querySelectorAll(interactables).forEach(el => {
-            el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-            el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-        });
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            }, { passive: true });
 
-        (function animateCursor() {
-            rx += (mx - rx) * 0.12;
-            ry += (my - ry) * 0.12;
-            dot.style.left = mx + 'px';
-            dot.style.top = my + 'px';
-            ring.style.left = rx + 'px';
-            ring.style.top = ry + 'px';
-            requestAnimationFrame(animateCursor);
-        })();
-
-        // ============================================================
-        // NAV SCROLL
-        // ============================================================
-        const nav = document.getElementById('nav');
-        const scrollHint = document.getElementById('scrollHint');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 60);
-            if (scrollHint) scrollHint.style.opacity = window.scrollY > 80 ? '0' : '1';
-        }, { passive: true });
-
-        // ============================================================
-        // HAMBURGER / MOBILE NAV
-        // ============================================================
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobileNav');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('open');
-            mobileNav.classList.toggle('open');
-            document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-        });
-        document.querySelectorAll('.mobile-close').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('open');
-                mobileNav.classList.remove('open');
-                document.body.style.overflow = '';
+            // Elementos que ativam o estado hover do cursor
+            const hoverTargets = 'a, button, .tech-tag, .project-card, .contact-link-card, .feature-item, .resource-card, .video-placeholder';
+            document.querySelectorAll(hoverTargets).forEach(el => {
+                el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
             });
-        });
 
-        // ============================================================
-        // SCROLL REVEAL
-        // ============================================================
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+            function animateCursor() {
+                ringX += (mouseX - ringX) * 0.12;
+                ringY += (mouseY - ringY) * 0.12;
+                dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+                ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            // ============================================================
+            // NAVEGAÇÃO
+            // ============================================================
+            const nav = document.getElementById('main-nav');
+            const navToggle = document.getElementById('navToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            window.addEventListener('scroll', () => {
+                nav.classList.toggle('scrolled', window.scrollY > 50);
+            }, { passive: true });
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+                document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
-
-        // ============================================================
-        // PROJECT TABS
-        // ============================================================
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const cards = document.querySelectorAll('.projeto-card');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                tabBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const tab = btn.dataset.tab;
-                cards.forEach(card => {
-                    const match = tab === 'todos' || card.dataset.cat === tab;
-                    card.style.display = match ? 'flex' : 'none';
-                    card.style.flexDirection = match ? 'column' : '';
+            document.querySelectorAll('.mobile-menu .nav-link, .mobile-menu .btn').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('open');
+                    mobileMenu.classList.remove('open');
+                    document.body.style.overflow = '';
                 });
             });
-        });
 
-        // ============================================================
-        // SMOOTH SCROLL
-        // ============================================================
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                const id = a.getAttribute('href');
-                if (id === '#') return;
-                const el = document.querySelector(id);
-                if (!el) return;
-                e.preventDefault();
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // ============================================================
+            // SCROLL REVEAL (Intersection Observer)
+            // ============================================================
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // ============================================================
+            // FILTRO DE PROJETOS
+            // ============================================================
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+
+                    projectCards.forEach(card => {
+                        if (filter === 'todos' || card.dataset.category === filter) {
+                            card.style.display = 'flex';
+                            card.style.flexDirection = 'column';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
             });
-        });
+
+            // ============================================================
+            // SCROLL SUAVE PARA LINKS INTERNOS
+            // ============================================================
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+        })();
     </script>
 </body>
 </html>
