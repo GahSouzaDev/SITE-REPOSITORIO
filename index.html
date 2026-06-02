@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Gah Souza Dev — Engenharia de Software, Robótica & IA</title>
     <meta name="description" content="Emerson Gabriel (Gah Souza Dev) — Desenvolvedor Full Stack, criador de robótica educacional, automação e inteligência artificial com ESP32, visão computacional e sistemas embarcados.">
-    <meta name="keywords" content="robótica educacional, ESP32, visão computacional, braço robótico, rover, automação, IA, full stack developer, engenharia de software, Gah Souza Dev">
+    <meta name="keywords" content="robótica educacional, ESP32, visão computacional, braço robótico, rover, automação, IA, full stack developer, engenharia de software, Gah Souza Dev, Controle Universal">
     <meta property="og:title" content="Gah Souza Dev — Robótica, IA & Desenvolvimento">
-    <meta property="og:description" content="Mini-documentários, projetos open-source e código para quem constrói o futuro com as próprias mãos.">
+    <meta property="og:description" content="Mini-documentários, projetos open-source e código para quem constrói o futuro com as próprias mãos. Conheça o Controle Universal V-1.0.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gahsouzadev.github.io">
     <meta property="og:image" content="https://gahsouzadev.github.io/profile.png">
@@ -690,6 +690,72 @@
         }
 
         /* ============================================================
+           CONTROLE UNIVERSAL — Grid com vídeo e descrição
+        ============================================================ */
+        .controle-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--gap-grid);
+            align-items: center;
+        }
+        .video-responsive {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            background: var(--gray-800);
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.4);
+        }
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .feature-badge {
+            display: inline-block;
+            background: rgba(217,142,4,0.2);
+            color: var(--gold);
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 20px;
+            border: 1px solid rgba(217,142,4,0.3);
+        }
+        .controle-text p {
+            color: var(--gray-200);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .feature-list-compact {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 32px 0;
+        }
+        .feature-list-compact .feature-item {
+            padding: 0;
+            border: none;
+            background: none;
+            transform: none;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-radius: 0;
+        }
+        .feature-list-compact .feature-item:hover {
+            transform: translateX(6px);
+            border-bottom-color: rgba(217,142,4,0.3);
+            background: none;
+        }
+
+        /* ============================================================
            PROJETOS — Cards refinados com filtro
         ============================================================ */
         .filter-bar {
@@ -1001,7 +1067,8 @@
         @media (max-width: 1024px) {
             .about-grid,
             .channel-grid,
-            .contact-grid {
+            .contact-grid,
+            .controle-grid {
                 grid-template-columns: 1fr;
                 gap: 56px;
             }
@@ -1033,6 +1100,7 @@
             <div class="nav-links">
                 <a href="#sobre" class="nav-link">Sobre</a>
                 <a href="#canal" class="nav-link">Canal</a>
+                <a href="#controle-universal" class="nav-link">Controle</a>
                 <a href="#projetos" class="nav-link">Projetos</a>
                 <a href="#recursos" class="nav-link">Recursos</a>
                 <a href="#contato" class="nav-link">Contato</a>
@@ -1050,6 +1118,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="#sobre" class="nav-link">Sobre</a>
         <a href="#canal" class="nav-link">Canal</a>
+        <a href="#controle-universal" class="nav-link">Controle</a>
         <a href="#projetos" class="nav-link">Projetos</a>
         <a href="#recursos" class="nav-link">Recursos</a>
         <a href="#contato" class="nav-link">Contato</a>
@@ -1203,6 +1272,71 @@
                     <div class="channel-bar">
                         <span><i class="fab fa-youtube" style="color:#FF0000;margin-right:8px"></i> GahSouzaDev</span>
                         <a href="https://www.youtube.com/@GahSouzaDev" target="_blank" class="btn btn-primary btn-sm">Inscrever</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         NOVA SEÇÃO: CONTROLE UNIVERSAL V-1.0
+    ============================================================ -->
+    <section id="controle-universal" class="section section-dark">
+        <div class="container">
+            <div class="controle-grid">
+                <!-- Vídeo incorporado -->
+                <div class="reveal">
+                    <div class="video-responsive">
+                        <iframe 
+                            src="https://www.youtube.com/embed/mjb4387u1nM?si=wGijkw0yw3RqAuSM" 
+                            title="Controle Universal V-1.0 - Apresentação" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <!-- Descrição -->
+                <div class="controle-text reveal delay-2">
+                    <span class="feature-badge">✨ PROJETO CARRO-CHEFE</span>
+                    <h2 class="heading-lg">Controle Universal <span style="color:var(--gold)">V-1.0</span></h2>
+                    <div class="divider-gold" style="margin: 20px 0 20px 0;"></div>
+                    <p>
+                        O primeiro projeto de um <strong>kit completo voltado à robótica educacional</strong>. 
+                        O Controle Universal foi pensado para <strong>interagir com qualquer dispositivo, qualquer software e qualquer projeto de robótica</strong> que eu possa desenvolver. 
+                        Mais que um controle remoto: é a peça central de um <strong>ecossistema educacional</strong> focado em <strong>controle, automação e inteligência artificial</strong>.
+                    </p>
+                    <div class="feature-list-compact">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div>
+                                <div class="feature-title">Universalidade total</div>
+                                <div class="feature-desc">Compatível com qualquer dispositivo (PC, smartphone, tablet) e qualquer software via protocolos abertos.</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+                            <div>
+                                <div class="feature-title">Integração com robótica</div>
+                                <div class="feature-desc">Rovers, braços robóticos, drones ou qualquer projeto — o controle se adapta via firmware modular.</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                            <div>
+                                <div class="feature-title">Ecossistema IA & Automação</div>
+                                <div class="feature-desc">Plataforma educacional para ensinar controle, automação industrial e IA embarcada na prática.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="https://www.youtube.com/watch?v=mjb4387u1nM" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-youtube"></i> Assistir ao vídeo completo
+                        </a>
+                        <a href="#projetos" class="btn btn-outline" style="margin-left: 12px;">
+                            <i class="fas fa-cube"></i> Explorar projetos
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1480,6 +1614,7 @@
                 <div class="footer-links">
                     <a href="#sobre">Sobre</a>
                     <a href="#canal">Canal</a>
+                    <a href="#controle-universal">Controle</a>
                     <a href="#projetos">Projetos</a>
                     <a href="#recursos">Recursos</a>
                     <a href="#contato">Contato</a>
